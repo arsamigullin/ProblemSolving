@@ -19,7 +19,6 @@ namespace Algorithms.Primes
                     factors.Add(i);
                     number = number/i;
                 }
-
                 i++;
             }
 
@@ -29,6 +28,7 @@ namespace Algorithms.Primes
             {
                 Console.Write(f+ " ");
             }
+            Console.WriteLine();
         }
     }
 }
