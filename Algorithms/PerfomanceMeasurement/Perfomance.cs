@@ -35,7 +35,11 @@ namespace Algorithms.PerfomanceMeasurement
             {
                 Console.Write("No Results");
             }
-            Console.WriteLine("\nEnd executing method " + function.Method.Name + ". Elapsed time: " + sw.Elapsed+"\n");
+            Console.Write("\nElapsed time of executing method ");
+            Console.ForegroundColor = ConsoleColor.Green;
+            Console.Write(function.Method.Name);
+            Console.ResetColor();
+            Console.Write(" : " + sw.Elapsed+ "\n\n");
         }
     }
 }
