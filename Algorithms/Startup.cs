@@ -3,8 +3,8 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using Algorithms.NumericalAlgorithms.Primes;
 using Algorithms.PerfomanceMeasurement;
-using Algorithms.Primes;
 
 namespace Algorithms
 {
@@ -18,9 +18,9 @@ namespace Algorithms
         }
         public void Go()
         {
-            Perfomance.DoMeasure(FindingPrimes.FirstVariant, 156321665);
-            Perfomance.DoMeasure(FindingPrimes.SecondVariant, 156321665);
-
+            Perfomance.DoMeasure(FindingPrimes.Go, 6);
+           // Perfomance.DoMeasure(FindingPrimesFactors.FirstVariant, 156321665);
+            //Perfomance.DoMeasure(FindingPrimesFactors.SecondVariant, 125);
         }
     }
 }

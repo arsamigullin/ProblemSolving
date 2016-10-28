@@ -19,14 +19,23 @@ namespace Algorithms.PerfomanceMeasurement
             Console.WriteLine("End executing method "+ action.Method.Name+". Elapsed time: "+ sw.Elapsed);
         }
 
-        public void DoMeasure(Action<int> action, int param)
+        public void DoMeasure(Func<long, List<long>> function, long param)
         {
-            Console.WriteLine("Start executing method " + action.Method.Name);
+            Console.WriteLine("Start executing method " + function.Method.Name);
             Stopwatch sw = new Stopwatch();
             sw.Start();
-            action.Invoke(param);
+            List<long> results = function.Invoke(param);
             sw.Stop();
-            Console.WriteLine("End executing method " + action.Method.Name + ". Elapsed time: " + sw.Elapsed);
+            Console.Write("Results: ");
+            foreach (var res in results)
+            {
+                Console.Write(res+"; ");
+            }
+            if (results.Count == 0)
+            {
+                Console.Write("No Results");
+            }
+            Console.WriteLine("\nEnd executing method " + function.Method.Name + ". Elapsed time: " + sw.Elapsed+"\n");
         }
     }
 }
