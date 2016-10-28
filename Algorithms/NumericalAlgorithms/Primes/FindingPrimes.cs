@@ -27,6 +27,7 @@ namespace Algorithms.NumericalAlgorithms.Primes
             while (next_prime <= stop_at)
             {
                 // "Cross out" multiples of this prime.
+                // next_prime*2 helps exclude prime numbers itself
                 for (int i = next_prime*2; i < number; i=i+next_prime)
                 {
                     isComposite[i] = true;
@@ -34,7 +35,7 @@ namespace Algorithms.NumericalAlgorithms.Primes
 
                 // Move to the next prime, skipping the even numbers.
                 next_prime = next_prime + 2;
-
+                // if number already was marked as Composite, will cross out it
                 while (next_prime<=number && isComposite[next_prime])
                 {
                     next_prime = next_prime + 2;

@@ -28,6 +28,8 @@ namespace Algorithms
             return factors;
         }
 
+        // This methos based on theorem:
+        // If positive number n is coposite then n has prime devisor p^2<=n
         // Complexity O(sqrt(N))
         public static List<long> SecondVariant(long number)
         {
@@ -43,6 +45,8 @@ namespace Algorithms
             //then by odd numbers instead of by all possible factors.Doing so cuts the
             //run time in half.
             int i = 3;
+            // all prime factor would be less than Sqrt(number)
+            // 
             int max_factor = (int) Math.Sqrt(number);
 
             while (i<=max_factor)
