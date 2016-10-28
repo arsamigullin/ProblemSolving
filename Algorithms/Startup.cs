@@ -18,7 +18,7 @@ namespace Algorithms
         }
         public void Go()
         {
-            Perfomance.DoMeasure(FindingPrimes.Go, 6);
+            Perfomance.DoMeasure(FindingPrimes.Go,22);
             Perfomance.DoMeasure(FindingPrimesFactors.FirstVariant, 156321665);
             Perfomance.DoMeasure(FindingPrimesFactors.SecondVariant, 125);
         }

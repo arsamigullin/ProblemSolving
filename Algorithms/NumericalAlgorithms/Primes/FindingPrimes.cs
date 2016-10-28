@@ -24,7 +24,7 @@ namespace Algorithms.NumericalAlgorithms.Primes
             // cross out multiples of primes found so far
             int next_prime = 3;
             int stop_at = (int)Math.Sqrt(number);
-            while (next_prime < stop_at)
+            while (next_prime <= stop_at)
             {
                 // "Cross out" multiples of this prime.
                 for (int i = next_prime*2; i < number; i=i+next_prime)
