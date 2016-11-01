@@ -18,7 +18,7 @@ namespace Algorithms
             Container = RegisteringModules.Register();
             Startup startup = Container.Resolve<Startup>();
             startup.Go();
-            Console.ReadLine();
+           // Console.ReadLine();
         }
     }
 }

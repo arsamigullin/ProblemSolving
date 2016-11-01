@@ -1,17 +1,20 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using Algorithms.Attributes;
 
 namespace Algorithms.NumericalAlgorithms.Primes
 {
+    [DisplayInfo("Primes", "Finding Primes")]
     class FindingPrimes
     {
-
+        private int number = 36231;
         //sieve of Eratosthenes
         // Complexity O(N × log(log N))
-        public static List<long> Go(long number)
+        public List<long> Go()
         {
             bool [] isComposite= new bool[number+1];
 

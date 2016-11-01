@@ -1,15 +1,19 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using Algorithms.Attributes;
 
 namespace Algorithms
 {
-    class FindingPrimesFactors
+    [DisplayInfo("Primes", "Finding Primes Factors")]
+    public class FindingPrimesFactors
     {
+        private long number = 65132;
         // Complexity O(N)
-        public static List<long> FirstVariant(long number)
+        public List<long> FirstVariant()
         {
             List<long> factors= new List<long>();
             // 2 is first prime number
@@ -31,7 +35,7 @@ namespace Algorithms
         // This methos based on theorem:
         // If positive number n is coposite then n has prime devisor p^2<=n
         // Complexity O(sqrt(N))
-        public static List<long> SecondVariant(long number)
+        public List<long> SecondVariant()
         {
             List<long> factors = new List<long>();
             // you only need to check divisibility by 2 and
