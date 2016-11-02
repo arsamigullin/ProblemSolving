@@ -30,7 +30,7 @@ namespace Algorithms
                     if (type.GetCustomAttributes(typeof(DisplayInfoAttribute), true).Length > 0)
                     {
                         DisplayInfoAttribute attribute= (DisplayInfoAttribute) Attribute.GetCustomAttribute(type, typeof(DisplayInfoAttribute));
-                        typeslist.Add(new TypeDTO {NameAlgorithm = attribute.NameAlgorithm, NameTypeAlgotrithms = attribute.NameTypeAlgorithms, Type = type});
+                        typeslist.Add(new TypeDTO {NameAlgorithm = attribute.NameAlgorithm, NameTypeAlgotrithms = attribute.NameTypeAlgorithms, Type = type, ReturnedType = attribute.ReturnType});
                     }
                 }
             }
@@ -39,7 +39,7 @@ namespace Algorithms
             int order = 1;
             foreach (var grouptype in orderedTypedList)
             {
-                Console.ForegroundColor = ConsoleColor.Blue;
+                Console.ForegroundColor = ConsoleColor.Yellow;
                 Console.Write(grouptype.Key);
                 Console.ResetColor();
                 Console.Write("\n");
@@ -67,13 +67,13 @@ namespace Algorithms
             }
 
             TypeDTO typeDto = typeslist.First(x => x.Order == res);
-            var insteance = Activator.CreateInstance(typeDto.Type);
+            var instance = Activator.CreateInstance(typeDto.Type);
 
             var miarr = typeDto.Type.GetTypeInfo().DeclaredMethods;
 
             foreach (var mi in miarr)
             {
-                Perfomance.DoMeasure( mi, insteance);
+                Perfomance.DoMeasure( mi, instance, typeDto);
             }
 
             Console.ReadLine();

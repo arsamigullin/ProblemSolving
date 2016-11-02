@@ -8,13 +8,14 @@ using Algorithms.Attributes;
 
 namespace Algorithms
 {
-    [DisplayInfo("Primes", "Finding Primes Factors")]
+    [DisplayInfo("Primes", "Finding Primes Factors", typeof(List<long>))]
     public class FindingPrimesFactors
     {
-        private long number = 65132;
+        private long num = 984654984346742420;
         // Complexity O(N)
         public List<long> FirstVariant()
         {
+            long number = num;
             List<long> factors= new List<long>();
             // 2 is first prime number
             int i = 2;
@@ -37,6 +38,7 @@ namespace Algorithms
         // Complexity O(sqrt(N))
         public List<long> SecondVariant()
         {
+            long number = num;
             List<long> factors = new List<long>();
             // you only need to check divisibility by 2 and
         

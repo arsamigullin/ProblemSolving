@@ -44,27 +44,35 @@ namespace Algorithms.PerfomanceMeasurement
             Console.Write(" : " + sw.Elapsed+ "\n\n");
         }
 
-        public void DoMeasure(MethodInfo mi, object instance)
+        public void DoMeasure(MethodInfo mi, object instance, TypeDTO typeDto)
         {
-            Console.WriteLine("Start executing method " + mi.Name);
+            Console.Write("Start executing algorithm ");
+            Console.ForegroundColor = ConsoleColor.Green;
+            Console.Write(typeDto.NameAlgorithm);
+            Console.ResetColor();
+            Console.Write(" from group ");
+            Console.ForegroundColor = ConsoleColor.Green;
+            Console.Write(typeDto.NameTypeAlgotrithms+"\n");
+            Console.ResetColor();
             Stopwatch sw = new Stopwatch();
             sw.Start();
-            List<long> results = (List<long>) mi.Invoke(instance, BindingFlags.InvokeMethod | BindingFlags.Instance | BindingFlags.Public, null, null, CultureInfo.InvariantCulture);
+            object results = mi.Invoke(instance, BindingFlags.InvokeMethod | BindingFlags.Instance | BindingFlags.Public, null, null, CultureInfo.InvariantCulture);
             sw.Stop();
+            dynamic  convertedResults = Convert.ChangeType(results, typeDto.ReturnedType);
             Console.Write("Results: ");
-            foreach (var res in results)
+            foreach (var res in convertedResults)
             {
                 Console.Write(res + "; ");
             }
-            if (results.Count == 0)
+            if (convertedResults.Count == 0)
             {
                 Console.Write("No Results");
             }
-            Console.Write("\nElapsed time of executing method ");
+
+            Console.Write("\nElapsed time of executing algorithm ");
             Console.ForegroundColor = ConsoleColor.Green;
-            Console.Write(mi.Name);
-            Console.ResetColor();
             Console.Write(" : " + sw.Elapsed + "\n\n");
+            Console.ResetColor();
         }
     }
 }

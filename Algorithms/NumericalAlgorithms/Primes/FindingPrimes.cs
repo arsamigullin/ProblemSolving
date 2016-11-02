@@ -8,7 +8,7 @@ using Algorithms.Attributes;
 
 namespace Algorithms.NumericalAlgorithms.Primes
 {
-    [DisplayInfo("Primes", "Finding Primes")]
+    [DisplayInfo("Primes", "Finding Primes", typeof(List<long>))]
     class FindingPrimes
     {
         private int number = 36231;

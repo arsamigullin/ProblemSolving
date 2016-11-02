@@ -12,25 +12,25 @@ namespace Algorithms.NumericalAlgorithms.Primes
     //between 1 and p are Fermat witnesses.In other words, if p is not prime and
     //    you pick a random number n between 1 and p, there is a 0.5 probability that n 
     //is a Fermat witness, so np–1 Mod p ≠ 1.
-    [DisplayInfo("Primes", "Testing for primality")]
+    [DisplayInfo("Primes", "Testing for primality", typeof(List<bool>))]
     public class TestingForPrimality
     {
         private int maxtests = 10;
         private int number = 46213;
-        public List<long> Go()
+        public List<bool> Go()
         {
-            List<long> resList = new List<long>();
+            List<bool> resList = new List<bool>();
             Random r = new Random();
             for (int i = 1; i < maxtests; i++)
             {
                 var random= r.Next(1, number);
                 if (Math.Pow(random, number - 1)% number == 1) continue;
-                resList.Add(0);
+                resList.Add(false);
                 return resList;
             }
             // The number is probably prime.
             // (There is a 1/2max_tests chance that it is not prime.)
-            resList.Add(0);
+            resList.Add(true);
             return resList;
         }
     }

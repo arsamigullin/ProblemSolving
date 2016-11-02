@@ -9,14 +9,17 @@ namespace Algorithms.Attributes
     [AttributeUsage(AttributeTargets.Class, Inherited = false)]
     class DisplayInfoAttribute:Attribute
     {
-        public DisplayInfoAttribute(string nameTypeAlgorithms, string nameAlgorithms)
+        public DisplayInfoAttribute(string nameTypeAlgorithms, string nameAlgorithms, Type returnType)
         {
            NameTypeAlgorithms = nameTypeAlgorithms;
-            NameAlgorithm = nameAlgorithms;
+           NameAlgorithm = nameAlgorithms;
+            ReturnType = returnType;
         }
 
         public string NameTypeAlgorithms { get; }
 
         public string NameAlgorithm { get; }
+
+        public Type ReturnType { get; }
     }
 }
