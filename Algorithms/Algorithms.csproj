@@ -54,6 +54,7 @@
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Searching\BinarySearch.cs" />
+    <Compile Include="Searching\InterpolationSearch.cs" />
     <Compile Include="Startup.cs" />
     <Compile Include="TypeDTO.cs" />
   </ItemGroup>
