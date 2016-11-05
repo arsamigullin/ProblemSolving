@@ -13,7 +13,7 @@ namespace Algorithms
 {
     public class Startup
     {
-        Perfomance Perfomance { get; set; }
+        Perfomance Perfomance { get; set;  }
 
         public Startup(Perfomance perfomance)
         {
