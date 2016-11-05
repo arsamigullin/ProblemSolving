@@ -35,7 +35,50 @@ namespace Algorithms
                 }
             }
 
-            var orderedTypedList = typeslist.GroupBy(x => x.NameTypeAlgotrithms);
+            var orderedTypedList = typeslist.GroupBy(x => x.NameTypeAlgotrithms).ToList();
+            fillAlgoList(orderedTypedList);
+            string key= Console.ReadLine();
+
+            while (key != "exit")
+            {
+                if (key == "fill")
+                {
+                    fillAlgoList(orderedTypedList);
+                    key = Console.ReadLine();
+                    continue;
+                }
+                int res;
+                if (!Int32.TryParse(key, out res))
+                {
+                    Console.WriteLine("You must eneter number");
+                    key = Console.ReadLine();
+                    continue;
+                }
+
+                if (typeslist.All(x => x.Order != res))
+                {
+                    Console.WriteLine("Algorithm not found");
+                    key = Console.ReadLine();
+                    continue;
+                }
+
+                TypeDTO typeDto = typeslist.First(x => x.Order == res);
+                var instance = Activator.CreateInstance(typeDto.Type);
+
+                var miarr = typeDto.Type.GetTypeInfo().DeclaredMethods.Where(x=>!x.Name.Contains(".ctor"));
+
+                foreach (var mi in miarr)
+                {
+                    Perfomance.DoMeasure(mi, instance, typeDto);
+                }
+
+                key = Console.ReadLine();
+            }
+            
+        }
+
+        private void fillAlgoList(IEnumerable<IGrouping<string,TypeDTO>> orderedTypedList)
+        {
             int order = 1;
             foreach (var grouptype in orderedTypedList)
             {
@@ -47,40 +90,10 @@ namespace Algorithms
                 foreach (var typeItem in grouptype)
                 {
                     typeItem.Order = order;
-                    Console.WriteLine(order+" - "+typeItem.NameAlgorithm);
+                    Console.WriteLine(order + " - " + typeItem.NameAlgorithm);
                     order++;
                 }
             }
-
-            string key= Console.ReadLine();
-            int res;
-            while (!Int32.TryParse(key, out res))
-            {
-                Console.WriteLine("You must eneter number");
-                key = Console.ReadLine();
-            }
-
-            while (typeslist.All(x => x.Order != res))
-            {
-                Console.WriteLine("Algorithm not found");
-                key = Console.ReadLine();
-            }
-
-            TypeDTO typeDto = typeslist.First(x => x.Order == res);
-            var instance = Activator.CreateInstance(typeDto.Type);
-
-            var miarr = typeDto.Type.GetTypeInfo().DeclaredMethods;
-
-            foreach (var mi in miarr)
-            {
-                Perfomance.DoMeasure( mi, instance, typeDto);
-            }
-
-            Console.ReadLine();
-
-            // Perfomance.DoMeasure(FindingPrimes.Go,22);
-            //  Perfomance.DoMeasure(FindingPrimesFactors.FirstVariant, 156321665);
-            // Perfomance.DoMeasure(FindingPrimesFactors.SecondVariant, 125);
         }
     }
 }
