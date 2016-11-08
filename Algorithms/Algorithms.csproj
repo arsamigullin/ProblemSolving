@@ -46,6 +46,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Attributes\DisplayInfoAttribute.cs" />
+    <Compile Include="LinkedList\SinglyLinkedList\IteratingOverTheList.cs" />
     <Compile Include="Modules\RegisteringModules.cs" />
     <Compile Include="NumericalAlgorithms\Primes\FindingPrimes.cs" />
     <Compile Include="NumericalAlgorithms\Primes\TestingForPrimality.cs" />
@@ -62,9 +63,7 @@
     <None Include="App.config" />
     <None Include="packages.config" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="LinkedList\" />
-  </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.
