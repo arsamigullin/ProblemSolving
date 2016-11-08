@@ -16,10 +16,10 @@ namespace Algorithms.Attributes
             ReturnType = returnType;
         }
 
-        public string NameTypeAlgorithms { get; }
+        public string NameTypeAlgorithms { get; set; }
 
-        public string NameAlgorithm { get; }
+        public string NameAlgorithm { get; set; }
 
-        public Type ReturnType { get; }
+        public Type ReturnType { get; set; }
     }
 }
