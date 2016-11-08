@@ -65,7 +65,7 @@ namespace Algorithms
                 TypeDTO typeDto = typeslist.First(x => x.Order == res);
                 var instance = Activator.CreateInstance(typeDto.Type);
 
-                var miarr = typeDto.Type.GetTypeInfo().DeclaredMethods.Where(x=>!x.Name.Contains(".ctor"));
+                var miarr = typeDto.Type.GetTypeInfo().DeclaredMethods.Where(x=>!x.Name.Contains(".ctor") && x.IsPublic);
 
                 foreach (var mi in miarr)
                 {

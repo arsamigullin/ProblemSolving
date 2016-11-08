@@ -7,25 +7,32 @@ using Algorithms.Attributes;
 
 namespace Algorithms.LinkedList.SinglyLinkedList
 {
-    [DisplayInfo("LinkedListSingly", "Iterating Over Singly Linked List", typeof(List<long>))]
+    [DisplayInfo("LinkedListSingly", "Iterating Over Singly Linked List", typeof(List<listItem>))]
     public class IteratingOverTheList
     {
-        LinkedList<int> linklist = new LinkedList<int>();
+        public class listItem
+        {
+            public int Number { get; set; }
+            public string Text { get; set; }
+        }
+
+        LinkedList<listItem> linklist = new LinkedList<listItem>();
 
         public IteratingOverTheList ()
         {
-            linklist.AddLast(1);
-            linklist.AddLast(4);
-            linklist.AddLast(8);
-            linklist.AddLast(10);
-            linklist.AddLast(12);
-            linklist.AddLast(17);
+            linklist.AddLast(new listItem { Number = 3, Text = "text1" });
+            linklist.AddLast(new listItem { Number = 4, Text = "text2" });
+            linklist.AddLast(new listItem { Number = 5, Text = "text3" });
+            linklist.AddLast(new listItem { Number = 6, Text = "text4" });
+            linklist.AddLast(new listItem { Number = 7, Text = "text5" });
+            linklist.AddLast(new listItem { Number = 8, Text = "text6" });
 
         }
-        public List<long> Iterate ()
+        // Complexity O(N)
+        public List<listItem> Iterate ()
         {
-            List<long> resList = new List<long>();
-            LinkedListNode<int> cell = linklist.First;
+            List<listItem> resList = new List<listItem>();
+            LinkedListNode<listItem> cell = linklist.First;
             while (cell != null)
             {
                 resList.Add(cell.Value);
