@@ -46,8 +46,13 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Attributes\DisplayInfoAttribute.cs" />
+    <Compile Include="LinkedList\DoublyLinkedList\ReverseList.cs" />
+    <Compile Include="LinkedList\SinglyLinkedList\AddingCellsAtTheBeginning.cs" />
     <Compile Include="LinkedList\SinglyLinkedList\FindingCells.cs" />
     <Compile Include="LinkedList\SinglyLinkedList\IteratingOverTheList.cs" />
+    <Compile Include="LinkedList\SinglyLinkedList\ReversingLinkedList.cs" />
+    <Compile Include="LinkedList\SinglyLinkedList\SinglyCellDescription\ISinglyCell.cs" />
+    <Compile Include="LinkedList\SinglyLinkedList\SinglyCellDescription\SinglyCell.cs" />
     <Compile Include="Modules\RegisteringModules.cs" />
     <Compile Include="NumericalAlgorithms\Primes\FindingPrimes.cs" />
     <Compile Include="NumericalAlgorithms\Primes\TestingForPrimality.cs" />
