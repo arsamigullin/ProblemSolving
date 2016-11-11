@@ -48,6 +48,8 @@
     <Compile Include="Attributes\DisplayInfoAttribute.cs" />
     <Compile Include="LinkedList\DoublyLinkedList\ReverseList.cs" />
     <Compile Include="LinkedList\SinglyLinkedList\AddingCellsAtTheBeginning.cs" />
+    <Compile Include="LinkedList\SinglyLinkedList\DetectingLoops\DetectingWithHashTable.cs" />
+    <Compile Include="LinkedList\SinglyLinkedList\DetectingLoops\ListRetracing.cs" />
     <Compile Include="LinkedList\SinglyLinkedList\FindingCells.cs" />
     <Compile Include="LinkedList\SinglyLinkedList\IteratingOverTheList.cs" />
     <Compile Include="LinkedList\SinglyLinkedList\ReversingLinkedList.cs" />
