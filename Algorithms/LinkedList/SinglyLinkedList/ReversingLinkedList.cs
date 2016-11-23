@@ -12,12 +12,13 @@ namespace Algorithms.LinkedList.SinglyLinkedList
     public class ReversingLinkedList
     {
         private List<ISinglyCell<string>> linkedList;
+        LinkedListResultDisplaying displaying = new LinkedListResultDisplaying();
         public ReversingLinkedList()
         {
             // Initialize our linked list
             linkedList = new List<ISinglyCell<string>>
             {
-                new SinglyCell<string> {Value = "sentinel"},
+               // new SinglyCell<string> {Value = "sentinel"},
                 new SinglyCell<string> {Value = "fist"},
                 new SinglyCell<string> {Value = "second"},
                 new SinglyCell<string> {Value = "third"},
@@ -33,21 +34,38 @@ namespace Algorithms.LinkedList.SinglyLinkedList
 
         }
 
+        //// Basically we must move three marks:
+        ////prev, cur, next
+        //public List<string> Reverse()
+        //{
+        //    ISinglyCell<string> curCell = linkedList.First();
+        //    ISinglyCell<string> prev = null;
+        //    while (curCell!=null)
+        //    {
+        //        ISinglyCell<string> next = curCell.Next;
+        //        curCell.Next = prev;
+
+        //        prev = curCell;
+        //        curCell = next;
+        //    }
+        //    return new List<string> { "DONE reversing manual linked list" };
+        //}
+
         // Basically we must move three marks:
         //prev, cur, next
-        public List<string> Reverse()
+        public List<string> ReverseWithoutSentinel()
         {
-            ISinglyCell<string> curCell = linkedList.First();
+            ISinglyCell<string> curCell = linkedList[0];
             ISinglyCell<string> prev = null;
             while (curCell!=null)
             {
-                ISinglyCell<string> next = curCell.Next;
+                ISinglyCell<string> nextCell = curCell.Next;
                 curCell.Next = prev;
 
                 prev = curCell;
-                curCell = next;
+                curCell = nextCell;
             }
-            return new List<string> { "DONE reversing manual linked list" };
+            return displaying.DisplayResult(linkedList);
         }
     }
 }
