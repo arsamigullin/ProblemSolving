@@ -63,25 +63,25 @@ namespace Algorithms.LinkedList.SinglyLinkedList
             while (cellfromFirst!=null )
             {
                 // if second linked list shorter of first linked list
-                // we just insert values from first single list
+                // we just insertToGeneralLinkedList values from first single list
                 if (cellfromSecond == null)
                 {
-                    lastInserted = insert(cellfromFirst,  lastInserted, mergedList);
+                    lastInserted = insertToGeneralLinkedList(cellfromFirst,  lastInserted, mergedList);
                     cellfromFirst = cellfromFirst.Next;
                     continue;
                 }
 
                 while (cellfromSecond!=null)
                 {
-
+                    // If first Linked List shorter than second we just add values to general linked list
                     if (cellfromFirst==null || cellfromFirst.Value >= cellfromSecond.Value)
                     {
-                        lastInserted = insert(cellfromSecond,  lastInserted, mergedList);
+                        lastInserted = insertToGeneralLinkedList(cellfromSecond,  lastInserted, mergedList);
                         cellfromSecond = cellfromSecond.Next;
                     }
                     else
                     {
-                        lastInserted = insert( cellfromFirst,  lastInserted, mergedList);
+                        lastInserted = insertToGeneralLinkedList( cellfromFirst,  lastInserted, mergedList);
                         cellfromFirst = cellfromFirst.Next;
                     }
                 }
@@ -90,7 +90,7 @@ namespace Algorithms.LinkedList.SinglyLinkedList
             return displaying.DisplayResult(mergedList);
         }
 
-        private ISinglyCell<int> insert(ISinglyCell<int> first,  ISinglyCell<int> lastinserted, List<ISinglyCell<int>> mergedList )
+        private ISinglyCell<int> insertToGeneralLinkedList(ISinglyCell<int> first,  ISinglyCell<int> lastinserted, List<ISinglyCell<int>> mergedList )
         {
             if (lastinserted != null)
             {
