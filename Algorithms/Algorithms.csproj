@@ -51,6 +51,8 @@
     <Compile Include="LinkedList\SinglyLinkedList\AddingCellsAtTheBeginning.cs" />
     <Compile Include="LinkedList\SinglyLinkedList\DetectingLoops\DetectingWithHashTable.cs" />
     <Compile Include="LinkedList\SinglyLinkedList\DetectingLoops\ListRetracing.cs" />
+    <Compile Include="LinkedList\SinglyLinkedList\ImpementingStackInterface.cs" />
+    <Compile Include="LinkedList\SinglyLinkedList\ImplementingQueueInterface.cs" />
     <Compile Include="LinkedList\SinglyLinkedList\InsertingValueFromSortedPerspective.cs" />
     <Compile Include="LinkedList\SinglyLinkedList\SinglyCellDescription\DoublyCell.cs" />
     <Compile Include="LinkedList\SinglyLinkedList\SinglyCellDescription\IDoublyCell.cs" />
