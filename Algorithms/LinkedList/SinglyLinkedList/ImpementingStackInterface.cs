@@ -25,7 +25,7 @@ namespace Algorithms.LinkedList.SinglyLinkedList
         }
     }
     // Custom Stack Interface
-    public interface StackInterface<T>
+    public interface IStackInterface<T>
     {
         void Push(T value);
         T Pop();
@@ -33,7 +33,7 @@ namespace Algorithms.LinkedList.SinglyLinkedList
 
     // Custom Stack interface implementation
     // FIFO
-    public class StackFromLinkedList<T> : StackInterface<T>
+    public class StackFromLinkedList<T> : IStackInterface<T>
     {
         private ISinglyCell<T> initialCell;
 
