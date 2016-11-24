@@ -1,12 +1,9 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using Algorithms.Attributes;
 using Algorithms.LinkedList.SinglyLinkedList.SinglyCellDescription;
 
-namespace Algorithms.LinkedList.SinglyLinkedList
+namespace Algorithms.LinkedList.SinglyLinkedList.DetectingLoops
 {
     [DisplayInfo("LinkedListSingly", "Detecting Loops: List revercing", typeof(List<string>))]
     public class RevercingCycledLinkedList

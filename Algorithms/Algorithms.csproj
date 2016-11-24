@@ -46,18 +46,22 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Attributes\DisplayInfoAttribute.cs" />
+    <Compile Include="LinkedList\DoublyLinkedList\InsertionSortingDoubly.cs" />
     <Compile Include="LinkedList\DoublyLinkedList\ReverseList.cs" />
     <Compile Include="LinkedList\SinglyLinkedList\AddingCellsAtTheBeginning.cs" />
     <Compile Include="LinkedList\SinglyLinkedList\DetectingLoops\DetectingWithHashTable.cs" />
     <Compile Include="LinkedList\SinglyLinkedList\DetectingLoops\ListRetracing.cs" />
+    <Compile Include="LinkedList\SinglyLinkedList\SinglyCellDescription\DoublyCell.cs" />
+    <Compile Include="LinkedList\SinglyLinkedList\SinglyCellDescription\IDoublyCell.cs" />
     <Compile Include="LinkedList\SinglyLinkedList\FindingCells.cs" />
     <Compile Include="LinkedList\SinglyLinkedList\IteratingOverTheList.cs" />
     <Compile Include="LinkedList\SinglyLinkedList\DetectingLoops\RevercingCycledLinkedList.cs" />
     <Compile Include="LinkedList\SinglyLinkedList\MergingTwoSortedLinkedListToOneSorted.cs" />
     <Compile Include="LinkedList\SinglyLinkedList\ReversingLinkedList.cs" />
-    <Compile Include="LinkedList\SinglyLinkedList\SinglyCellDescription\ISinglyCell.cs" />
-    <Compile Include="LinkedList\SinglyLinkedList\SinglyCellDescription\SinglyCell.cs" />
+    <Compile Include="LinkedList\DoublyLinkedList\DoublyCellDescription\IDoublyCell.cs" />
+    <Compile Include="LinkedList\DoublyLinkedList\DoublyCellDescription\DoublyCell.cs" />
     <Compile Include="LinkedList\LinkedListResultDisplaying.cs" />
+    <Compile Include="LinkedList\SinglyLinkedList\InsertionSortingSingly.cs" />
     <Compile Include="Modules\RegisteringModules.cs" />
     <Compile Include="NumericalAlgorithms\Primes\FindingPrimes.cs" />
     <Compile Include="NumericalAlgorithms\Primes\TestingForPrimality.cs" />
