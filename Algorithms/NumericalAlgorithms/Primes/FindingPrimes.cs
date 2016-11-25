@@ -11,7 +11,7 @@ namespace Algorithms.NumericalAlgorithms.Primes
     [DisplayInfo("Primes", "Finding Primes", typeof(List<long>))]
     class FindingPrimes
     {
-        private int number = 36231;
+        private int number = 65536;
         //sieve of Eratosthenes
         // Complexity O(N × log(log N))
         public List<long> Go()

@@ -45,7 +45,9 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AdvancedTasks\AntiArithmetic.cs" />
     <Compile Include="AdvancedTasks\BusNumbers.cs" />
+    <Compile Include="AdvancedTasks\ListGame.cs" />
     <Compile Include="Attributes\DisplayInfoAttribute.cs" />
     <Compile Include="LinkedList\DoublyLinkedList\InsertionSortingDoubly.cs" />
     <Compile Include="LinkedList\DoublyLinkedList\ReverseList.cs" />
