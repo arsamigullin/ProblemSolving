@@ -37,45 +37,65 @@ namespace Algorithms.AdvancedTasks
                 split = split[1].Trim().Split(new char[] {' '}, StringSplitOptions.None);
                 array = Array.ConvertAll(split, int.Parse);
                 int max = array.Max() / 2;
-                bool res = check(array, lisSequence, max, false);
+                bool res = check(array, max, false);
                 if (!res)
                 {
-                    res = check(array, lisSequence, max, true);
+                    res = check(array, max, true);
                 }
-                buff.WriteLine(res ? "no" : "yes");
+                Console.WriteLine(res ? "no" : "yes");
             }
         }
-
-        private bool check(int[] array, List<int> lisSequence, int max, bool isDiff)
+        // 0 5 8 3 1 45 - is wrong
+        private bool check(int[] array,  int max, bool isDiff)
         {
-
-            for (int i = 0; i < array.Length; i++)
-            {
-                if (lisSequence.Count == 3) return true;
-                var i1 = i;
-                if (isDiff)
-                {
-                    max = array[i1]/2;
-                }
-
-                for (int j = 1; j <= max + 1; j++)
-                {
-                    if (lisSequence.Count == 3) return true;
-                    lisSequence.Clear();
-                    var cmprs = array[i1];
-                    lisSequence.Add(cmprs);
-                    List<int> interarray = array.ToList();
-                    interarray.RemoveRange(0, interarray.IndexOf(cmprs));
-                    while (lisSequence.Count != 3)
+            int k=0;
+ 
+                   // bool breakingsecond = false;
+                    for (int j = 0; j < array.Length; j++)
                     {
-                        var incr = getWhereRes(isDiff, interarray, cmprs, j);
-                        if (incr.Count == 0) break;
-                        cmprs = incr.First();
-                        lisSequence.Add(cmprs);
-                        interarray.RemoveRange(0, interarray.IndexOf(cmprs));
+                        if (k == 3) return true;
+                        //breakingsecond = false;
+                        if (j == array.Length - 1) return false;
+                        if (isDiff)
+                        {
+                            max = (int)array[j] / 2;
+                        }
+                        if (k == 0)
+                        {
+                            k++;
+                        }
+                        for (int d = 1; d < max; d++)
+                        {
+                           
+                            for (int i = j + 1; i < array.Length; i++)
+                            {
+                                if (isDiff)
+                                {
+                                    if (array[j] - array[i] != d) continue;
+                                }
+                                else
+                                {
+                                    if (array[i] - array[j] != d) continue;
+                                }
+                                
+                                j = i;
+                                k++;
+                                if (k == 3) return true;
+                                //breakingsecond = true;
+                                //break;
+                            }
+                            
+                            //if (breakingsecond)
+                            //{
+                            //    continue;
+                            //}
+                           
+                        }
+                        
+
+                        k=0;
                     }
-                }
-            }
+
             return false;
         }
 
