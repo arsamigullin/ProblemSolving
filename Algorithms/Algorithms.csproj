@@ -47,6 +47,8 @@
   <ItemGroup>
     <Compile Include="AdvancedTasks\AntiArithmetic.cs" />
     <Compile Include="AdvancedTasks\BusNumbers.cs" />
+    <Compile Include="AdvancedTasks\Cetiri.cs" />
+    <Compile Include="AdvancedTasks\CheckingForCorrectness.cs" />
     <Compile Include="AdvancedTasks\ListGame.cs" />
     <Compile Include="Attributes\DisplayInfoAttribute.cs" />
     <Compile Include="LinkedList\DoublyLinkedList\InsertionSortingDoubly.cs" />
@@ -78,7 +80,9 @@
     <Compile Include="TypeDTO.cs" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="App.config" />
+    <None Include="App.config">
+      <SubType>Designer</SubType>
+    </None>
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
