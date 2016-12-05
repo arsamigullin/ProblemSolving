@@ -36,6 +36,8 @@
       <HintPath>packages\Autofac.4.1.1\lib\net45\Autofac.dll</HintPath>
       <Private>True</Private>
     </Reference>
+    <Reference Include="PresentationCore" />
+    <Reference Include="PresentationFramework" />
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
@@ -43,6 +45,7 @@
     <Reference Include="Microsoft.CSharp" />
     <Reference Include="System.Data" />
     <Reference Include="System.Xml" />
+    <Reference Include="WindowsBase" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Attributes\DisplayInfoAttribute.cs" />
@@ -72,6 +75,12 @@
     <Compile Include="Searching\BinarySearch.cs" />
     <Compile Include="Searching\InterpolationSearch.cs" />
     <Compile Include="Startup.cs" />
+    <Compile Include="Trees\BinaryTree\BinaryTreeDescription\BinaryNode.cs" />
+    <Compile Include="Trees\BinaryTree\BinaryTreeDescription\IBinaryNode.cs" />
+    <Compile Include="Trees\BinaryTree\BinaryTreeTraversal\InorderBinaryTreeTraversal.cs" />
+    <Compile Include="Trees\BinaryTree\BinaryTreeTraversal\PostOrderBinaryTreeTraversal.cs" />
+    <Compile Include="Trees\BinaryTree\BinaryTreeTraversal\PreorderBinaryTreeTraversal.cs" />
+    <Compile Include="Trees\UnimportantOrderTreeDesc\UnimportantOrderTreeDesc.cs" />
     <Compile Include="TypeDTO.cs" />
   </ItemGroup>
   <ItemGroup>
