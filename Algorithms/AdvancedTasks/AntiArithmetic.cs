@@ -25,76 +25,41 @@ namespace Algorithms.AdvancedTasks
                 string tokenVal = tok.ReadLine();
                 if (tokenVal.Trim() == "0")
                 {
-                    return lisSequence;
+                    return new List<int>();
                 }
-                lisSequence.Clear();
-                BufferedStdoutWriter buff = new BufferedStdoutWriter();
-                //while ((line = Console.ReadLine()) != "")
-                //{
-                //line = line.Trim();
-                //if (line.Length == 1) continue;
-                string[] split = tokenVal.Split(new char[] {':'}, StringSplitOptions.None);
-                split = split[1].Trim().Split(new char[] {' '}, StringSplitOptions.None);
-                array = Array.ConvertAll(split, int.Parse);
-                int max = array.Max() / 2;
-                bool res = check(array, max, false);
-                if (!res)
-                {
-                    res = check(array, max, true);
-                }
+                string[] split = tokenVal.Split(new char[] { ':' }, StringSplitOptions.None);
+                countnumber = Int32.Parse(split[0]);
+                split = split[1].Trim().Split(new char[] { ' ' }, StringSplitOptions.None);
+                array = split.Select(Int32.Parse).ToArray(); //Array.ConvertAll(split, int.Parse);
+                bool res = check(array, countnumber);
                 Console.WriteLine(res ? "no" : "yes");
             }
         }
-        // 0 5 8 3 1 45 - is wrong
-        private bool check(int[] array,  int max, bool isDiff)
+        // 5: 0 5 8 3 1 45 - is wrong
+        //  3: 0 2 1
+        //5: 2 0 3 1 4
+        //6: 2 4 3 5 0 1
+        private static bool check(int[] array, int countNumber)
         {
-            int k=0;
- 
-                   // bool breakingsecond = false;
-                    for (int j = 0; j < array.Length; j++)
+            int arrayLength = array.Length;
+            int d=-10000;
+            for (int j = 0; j < arrayLength; j++)
+            {
+                if (j == arrayLength - 1)
+                {
+                    return false;
+                }
+                for (int i = j+1; i < arrayLength; i++)
+                {
+                    int dif = array[i] - array[j];
+                    if (dif == 2 * d)
                     {
-                        if (k == 3) return true;
-                        //breakingsecond = false;
-                        if (j == array.Length - 1) return false;
-                        if (isDiff)
-                        {
-                            max = (int)array[j] / 2;
-                        }
-                        if (k == 0)
-                        {
-                            k++;
-                        }
-                        for (int d = 1; d < max; d++)
-                        {
-                           
-                            for (int i = j + 1; i < array.Length; i++)
-                            {
-                                if (isDiff)
-                                {
-                                    if (array[j] - array[i] != d) continue;
-                                }
-                                else
-                                {
-                                    if (array[i] - array[j] != d) continue;
-                                }
-                                
-                                j = i;
-                                k++;
-                                if (k == 3) return true;
-                                //breakingsecond = true;
-                                //break;
-                            }
-                            
-                            //if (breakingsecond)
-                            //{
-                            //    continue;
-                            //}
-                           
-                        }
-                        
-
-                        k=0;
+                        return true;
                     }
+                    d = dif;
+                }
+                d = -10000;
+            }
 
             return false;
         }
