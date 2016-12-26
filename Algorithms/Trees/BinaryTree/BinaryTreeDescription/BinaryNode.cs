@@ -21,13 +21,41 @@ namespace Algorithms.Trees
 //M in a binary tree that contains N nodes is M = N + 1.
 //■ If a binary tree has N0 leaf nodes and N2 nodes with degree 2, N0 = N2 + 1. 
 //In other words, there is one more leaf node than nodes with degree 2.
-    public class BinaryNode<T>:IBinaryNode<T>
+    public class BinaryNode<T>:IBinaryNode<T> where T : IComparable
     {
-        public T Name { get; set; }
+        public string Name { get; set; }
         public IBinaryNode<T> LeftNode { get; set; }
         public IBinaryNode<T> RightNode { get; set; }
+        public T Value { get; set; }
+        public void AddNode(string name, T new_value)
+        {
+            if (new_value.CompareTo(Value) < 0)
+            {
+                if (LeftNode == null)
+                {
+                    LeftNode= new BinaryNode<T>(name);
+                    LeftNode.Value = new_value;
+                }
+                else
+                {
+                    LeftNode.AddNode(name, new_value);
+                }
+            }
+            else
+            {
+                if (RightNode == null)
+                {
+                    RightNode= new BinaryNode<T>(name);
+                    RightNode.Value = new_value;
+                }
+                else
+                {
+                    RightNode.AddNode(name, new_value);
+                }
+            }
+        }
 
-        public BinaryNode(T name)
+        public BinaryNode(string name)
         {
             Name = name;
         }
