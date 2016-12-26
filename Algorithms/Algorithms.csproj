@@ -54,6 +54,8 @@
     <Compile Include="AdvancedTasks\DevisorsPrimeFactors.cs" />
     <Compile Include="AdvancedTasks\FindingMostCommonDevisorFromAnArray.cs" />
     <Compile Include="AdvancedTasks\ListGame.cs" />
+    <Compile Include="AdvancedTasks\SortingArrayAtKposition.cs" />
+    <Compile Include="AdvancedTasks\SortingArrayAtXKposition.cs" />
     <Compile Include="Attributes\DisplayInfoAttribute.cs" />
     <Compile Include="LinkedList\DoublyLinkedList\InsertionSortingDoubly.cs" />
     <Compile Include="LinkedList\DoublyLinkedList\ReverseList.cs" />
@@ -85,6 +87,7 @@
     <Compile Include="Sorting\ON2\InsertionSort.cs" />
     <Compile Include="Sorting\ON2\SelectionSort.cs" />
     <Compile Include="Sorting\ONLogN\HeapSort.cs" />
+    <Compile Include="Sorting\ONLogN\QuickSort.cs" />
     <Compile Include="Startup.cs" />
     <Compile Include="Trees\BinaryTree\BinaryTreeDescription\BinaryNode.cs" />
     <Compile Include="Trees\BinaryTree\BinaryTreeDescription\IBinaryNode.cs" />
