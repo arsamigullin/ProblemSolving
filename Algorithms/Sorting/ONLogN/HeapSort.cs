@@ -10,11 +10,43 @@ namespace Algorithms.Sorting.ONLogN
     [DisplayInfo("Sorting", "O(NLogN) - Heap Sort in Arrays", typeof(List<int>))]
     class HeapSort
     {
-        public List<int> MakeHeap()
+        public List<int> Sort()
         {
             int[] array = new int[] { 456, 987651, 56, 32546513, 668, 5, 946, 8, 65496, 876 };
+            //array = new int[] { 7,1,10,4,6,9,2,11,3,5,12,8 };
+            // We need turn the array into the heap
+            array = MakeHeap(array, array.Length);
+            // there are two ways for heap sorting : 
+
+            // 1-st way 
+            for (int i = array.Length - 1; i > 0; i--)
+            {
+                int ret = RemoveTopItem(array, i+1);
+                array[i] = ret;
+            }
+
+            // 2-nd way
+            // turn array into the heap again
+            array = new int[] { 456, 987651, 56, 32546513, 668, 5, 946, 8, 65496, 876 };
+            array = MakeHeap(array, array.Length);
+            for (int i = array.Length - 1; i > 0; i--)
+            {
+
+                //swap the root item and the last item
+                int temp = array[0];
+                array[0] = array[i];
+                array[i] = temp;
+                array = MakeHeap(array, i);
+
+            }
+            return array.ToList();
+        }
+
+        private int[] MakeHeap(int[] array, int length)
+        {
+           
             
-            for (int i = 0; i < array.Length-1; i++)
+            for (int i = 0; i < length; i++)
             {
                 int index = i;
                 while (index != 0)
@@ -36,17 +68,17 @@ namespace Algorithms.Sorting.ONLogN
                     index = parent;
                 }
             }
-            RemoveTopItem(array);
-            return array.ToList();
+            
+            return array;
         }
 
-        private int RemoveTopItem(int[] array)
+        private int RemoveTopItem(int[] array, int lenth)
         {
             // Save the top item to return later
             int result = array[0];
             // Move the last item to the root
-            array[0] = array[array.Length - 1];
-            int arrLen = array.Length;
+            array[0] = array[lenth - 1];
+            int arrLen = lenth;
             int index = 0;
             // restore the heap property
             while (true)
