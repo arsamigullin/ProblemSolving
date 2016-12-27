@@ -87,6 +87,7 @@
     <Compile Include="Sorting\ON2\InsertionSort.cs" />
     <Compile Include="Sorting\ON2\SelectionSort.cs" />
     <Compile Include="Sorting\ONLogN\HeapSort.cs" />
+    <Compile Include="Sorting\ONLogN\MergeSort.cs" />
     <Compile Include="Sorting\ONLogN\QuickSort.cs" />
     <Compile Include="Startup.cs" />
     <Compile Include="Trees\BinaryTree\BinaryTreeDescription\BinaryNode.cs" />
