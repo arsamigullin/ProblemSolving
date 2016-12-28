@@ -7,33 +7,23 @@ using Algorithms.Attributes;
 
 namespace Algorithms.AdvancedTasks
 {
-    [DisplayInfo("Anvanced Tasks", "HacherRank - Super Reduced String", typeof(List<string>))]
+    [DisplayInfo("Anvanced Tasks", "Hackerrank - Super Reduced String", typeof(List<string>))]
     class SuperReducingString
     {
         public List<string> Go()
         {
             string s = "acdqglrfkqyuqfjkxyqvnrtysfrzrmzlygfveulqfpdbhlqdqrrqdqlhbdpfqluevfgylzmrzrfsytrnvqyxkjfquyqkfrlacdqj";
             string distString = String.Join("", s.Distinct());
-            string temp = "";
-            bool whileBreak = false;
-            while (true)
-            {
-                whileBreak = false;
-                for (int j = 0; j < distString.Length; j++)
-                {
-                    s = s.Replace(distString[j].ToString() + distString[j], "");
-                }
                 for (int j = 0; j < distString.Length; j++)
                 {
                     if (s.IndexOf(distString[j].ToString() + distString[j], StringComparison.Ordinal) >= 0)
                     {
-                        whileBreak = true;
-                        break;
+                        s = s.Replace(distString[j].ToString() + distString[j], "");
+                        j = -1;
                     }
+                    
                 }
-                if (!whileBreak)
-                break;
-            }
+
 
                
             

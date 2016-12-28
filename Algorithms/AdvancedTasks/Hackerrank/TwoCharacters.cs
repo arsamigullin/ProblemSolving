@@ -8,7 +8,7 @@ using Algorithms.Attributes;
 
 namespace Algorithms.AdvancedTasks
 {
-    [DisplayInfo("Anvanced Tasks", "HacherRank - Two Characters", typeof(List<int>))]
+    [DisplayInfo("Anvanced Tasks", "Hackerrank - Two Characters", typeof(List<int>))]
     class TwoCharacters
     {
         public List<int> Go()
