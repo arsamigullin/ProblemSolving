@@ -7,13 +7,13 @@ using Algorithms.Attributes;
 
 namespace Algorithms.Sorting.ONLogN
 {
-    [DisplayInfo("Sorting", "O(N^2) - Selection Sort in Arrays", typeof(List<int>))]
+    [DisplayInfo("Sorting", "O(NLogN) - Merge Sort in Arrays", typeof(List<int>))]
     class MergeSort
     {
         public List<int> Sort()
         {
-            int[] array = new int[] { 456, 987651, 56, 32546513, 668, 5, 946, 8, 65496, 876 };
-            DoMergeSort(array, new int[array.Length],0, array.Length);
+            int[] array = new int[] { 1, 1, 1, 2, 2 };
+            DoMergeSort(array, new int[array.Length],0, array.Length-1);
             return array.ToList();
         }
 
