@@ -49,16 +49,18 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="AdvancedTasks\BusNumbers.cs" />
-    <Compile Include="AdvancedTasks\Hackerrank\CamelCase.cs" />
+    <Compile Include="AdvancedTasks\Hackerrank\Strings\CamelCase.cs" />
     <Compile Include="AdvancedTasks\Cetiri.cs" />
     <Compile Include="AdvancedTasks\CheckingForCorrectness.cs" />
     <Compile Include="AdvancedTasks\DevisorsPrimeFactors.cs" />
     <Compile Include="AdvancedTasks\FindingMostCommonDevisorFromAnArray.cs" />
+    <Compile Include="AdvancedTasks\Hackerrank\Strings\Gemstones.cs" />
+    <Compile Include="AdvancedTasks\Hackerrank\Strings\Pangrams.cs" />
     <Compile Include="AdvancedTasks\ListGame.cs" />
     <Compile Include="AdvancedTasks\SortingArrayAtKposition.cs" />
     <Compile Include="AdvancedTasks\SortingArrayAtXKposition.cs" />
-    <Compile Include="AdvancedTasks\Hackerrank\SuperReducingString.cs" />
-    <Compile Include="AdvancedTasks\Hackerrank\TwoCharacters.cs" />
+    <Compile Include="AdvancedTasks\Hackerrank\Strings\SuperReducingString.cs" />
+    <Compile Include="AdvancedTasks\Hackerrank\Strings\TwoCharacters.cs" />
     <Compile Include="Attributes\DisplayInfoAttribute.cs" />
     <Compile Include="LinkedList\DoublyLinkedList\InsertionSortingDoubly.cs" />
     <Compile Include="LinkedList\DoublyLinkedList\ReverseList.cs" />
@@ -93,6 +95,7 @@
     <Compile Include="Sorting\ONLogN\MergeSort.cs" />
     <Compile Include="Sorting\ONLogN\QuickSort.cs" />
     <Compile Include="Startup.cs" />
+    <Compile Include="Strings\MatchingParentheses.cs" />
     <Compile Include="Trees\BinaryTree\BinaryTreeDescription\BinaryNode.cs" />
     <Compile Include="Trees\BinaryTree\BinaryTreeDescription\IBinaryNode.cs" />
     <Compile Include="Trees\BinaryTree\BinaryTreeTraversal\DepthFirstBinaryTreeTraversal.cs" />
