@@ -12,6 +12,8 @@ namespace Algorithms.AdvancedTasks.Hackerrank.Strings
     {
         public List<string> Go()
         {
+            string s = "0";
+            char c = Convert.ToChar(s);
             /* Enter your code here. Read input from STDIN. Print output to STDOUT. Your class should be named Solution */
             string[] list = new string[5];
             list[0] = "wlqdbbmrbbca";

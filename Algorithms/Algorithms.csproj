@@ -49,12 +49,16 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="AdvancedTasks\BusNumbers.cs" />
+    <Compile Include="AdvancedTasks\BoyerMooreSearchingEntriesString.cs" />
+    <Compile Include="AdvancedTasks\Hackerrank\Strings\AlternatingCharacters.cs" />
+    <Compile Include="AdvancedTasks\Hackerrank\Strings\CaesarCipher.cs" />
     <Compile Include="AdvancedTasks\Hackerrank\Strings\CamelCase.cs" />
     <Compile Include="AdvancedTasks\Cetiri.cs" />
     <Compile Include="AdvancedTasks\CheckingForCorrectness.cs" />
     <Compile Include="AdvancedTasks\DevisorsPrimeFactors.cs" />
     <Compile Include="AdvancedTasks\FindingMostCommonDevisorFromAnArray.cs" />
     <Compile Include="AdvancedTasks\Hackerrank\Strings\Gemstones.cs" />
+    <Compile Include="AdvancedTasks\Hackerrank\Strings\MakingAnagrams.cs" />
     <Compile Include="AdvancedTasks\Hackerrank\Strings\Pangrams.cs" />
     <Compile Include="AdvancedTasks\ListGame.cs" />
     <Compile Include="AdvancedTasks\SortingArrayAtKposition.cs" />

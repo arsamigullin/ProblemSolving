@@ -14,6 +14,10 @@ namespace Algorithms.Sorting.ON2
     {
         public List<int> Sort()
         {
+            double d=4.0;
+            string s = "7";
+            double b = d + Double.Parse(s);
+            Console.WriteLine(b.ToString("N1"));
             int[] array = new int[] { 456, 987651, 56, 32546513, 668, 5, 946, 8, 65496, 876 };
             var minIndex = 0;
             for (int i = 0; i < array.Length; i++)
