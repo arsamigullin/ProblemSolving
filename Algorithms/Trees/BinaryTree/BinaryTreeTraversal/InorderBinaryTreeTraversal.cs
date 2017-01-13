@@ -32,7 +32,7 @@ namespace Algorithms.Trees.BinaryTree.BinaryTreeTraversal
             {
                 TraverseInorder(node.LeftNode);
             }
-            Console.WriteLine(node.Name);
+            Console.WriteLine(node.Data);
             if (node.RightNode != null)
             {
                 TraverseInorder(node.RightNode);

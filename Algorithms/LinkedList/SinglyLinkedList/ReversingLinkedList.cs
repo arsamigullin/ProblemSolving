@@ -55,6 +55,8 @@ namespace Algorithms.LinkedList.SinglyLinkedList
         //prev, cur, next
         public List<string> ReverseWithoutSentinel()
         {
+            int p = 1%2;
+            
             ISinglyCell<string> curCell = linkedList[0];
             ISinglyCell<string> prev = null;
             while (curCell!=null)

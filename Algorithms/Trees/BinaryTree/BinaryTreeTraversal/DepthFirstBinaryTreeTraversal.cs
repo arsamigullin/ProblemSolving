@@ -23,7 +23,7 @@ namespace Algorithms.Trees.BinaryTree.BinaryTreeTraversal
             {
                 var node = children.Dequeue();
                 // <Process node>
-                Console.WriteLine(node.Name);
+                Console.WriteLine(node.Data);
                 if (node.LeftNode!=null) children.Enqueue(node.LeftNode);
                 if (node.RightNode != null) children.Enqueue(node.RightNode);
             }

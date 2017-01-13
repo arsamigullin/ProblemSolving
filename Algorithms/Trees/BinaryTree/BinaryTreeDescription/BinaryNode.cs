@@ -23,7 +23,7 @@ namespace Algorithms.Trees
 //In other words, there is one more leaf node than nodes with degree 2.
     public class BinaryNode<T>:IBinaryNode<T> where T : IComparable
     {
-        public string Name { get; set; }
+        public T Data { get; set; }
         public IBinaryNode<T> LeftNode { get; set; }
         public IBinaryNode<T> RightNode { get; set; }
         public T Value { get; set; }
@@ -33,7 +33,7 @@ namespace Algorithms.Trees
             {
                 if (LeftNode == null)
                 {
-                    LeftNode= new BinaryNode<T>(name);
+                    LeftNode= new BinaryNode<T>(new_value);
                     LeftNode.Value = new_value;
                 }
                 else
@@ -45,7 +45,7 @@ namespace Algorithms.Trees
             {
                 if (RightNode == null)
                 {
-                    RightNode= new BinaryNode<T>(name);
+                    RightNode= new BinaryNode<T>(new_value);
                     RightNode.Value = new_value;
                 }
                 else
@@ -55,9 +55,14 @@ namespace Algorithms.Trees
             }
         }
 
-        public BinaryNode(string name)
+        public BinaryNode(T data)
         {
-            Name = name;
+            Data = data;
+        }
+
+        public BinaryNode()
+        {
+            
         }
     }
 }
