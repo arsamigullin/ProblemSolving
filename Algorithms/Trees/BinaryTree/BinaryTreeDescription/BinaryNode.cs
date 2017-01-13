@@ -33,7 +33,7 @@ namespace Algorithms.Trees
             {
                 if (LeftNode == null)
                 {
-                    LeftNode= new BinaryNode<T>(name);
+                    LeftNode= new BinaryNode<T>(new_value);
                     LeftNode.Value = new_value;
                 }
                 else
@@ -45,7 +45,7 @@ namespace Algorithms.Trees
             {
                 if (RightNode == null)
                 {
-                    RightNode= new BinaryNode<T>(name);
+                    RightNode= new BinaryNode<T>(new_value);
                     RightNode.Value = new_value;
                 }
                 else
