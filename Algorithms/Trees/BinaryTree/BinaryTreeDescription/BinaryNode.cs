@@ -23,13 +23,18 @@ namespace Algorithms.Trees
 //In other words, there is one more leaf node than nodes with degree 2.
     public class BinaryNode<T>:IBinaryNode<T>
     {
-        public T Name { get; set; }
+        public T Data { get; set; }
         public IBinaryNode<T> LeftNode { get; set; }
         public IBinaryNode<T> RightNode { get; set; }
 
-        public BinaryNode(T name)
+        public BinaryNode(T data)
         {
-            Name = name;
+            Data = data;
+        }
+
+        public BinaryNode()
+        {
+            
         }
     }
 }

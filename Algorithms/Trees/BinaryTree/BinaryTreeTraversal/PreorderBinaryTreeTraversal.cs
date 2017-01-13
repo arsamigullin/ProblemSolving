@@ -46,7 +46,7 @@ namespace Algorithms.Trees.BinaryTree.BinaryTreeTraversal
 
         private void TraversePreorder(IBinaryNode<string> node)
         {
-            Console.WriteLine(node.Name);
+            Console.WriteLine(node.Data);
             if (node.LeftNode != null)
             {
                 TraversePreorder(node.LeftNode);

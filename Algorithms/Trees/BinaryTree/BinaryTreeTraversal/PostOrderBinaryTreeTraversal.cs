@@ -49,7 +49,7 @@ namespace Algorithms.Trees.BinaryTree.BinaryTreeTraversal
             {
                 TraversePostorder(node.LeftNode);
             }
-            Console.WriteLine(node.Name);
+            Console.WriteLine(node.Data);
             if (node.RightNode != null)
             {
                 TraversePostorder(node.RightNode);

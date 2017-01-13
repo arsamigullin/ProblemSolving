@@ -54,6 +54,7 @@
     <Compile Include="LinkedList\SinglyLinkedList\AddingCellsAtTheBeginning.cs" />
     <Compile Include="LinkedList\SinglyLinkedList\DetectingLoops\DetectingWithHashTable.cs" />
     <Compile Include="LinkedList\SinglyLinkedList\DetectingLoops\ListRetracing.cs" />
+    <Compile Include="LinkedList\SinglyLinkedList\RemoveDuplication.cs" />
     <Compile Include="LinkedList\SinglyLinkedList\SinglyCellDescription\DoublyCell.cs" />
     <Compile Include="LinkedList\SinglyLinkedList\SinglyCellDescription\IDoublyCell.cs" />
     <Compile Include="LinkedList\SinglyLinkedList\FindingCells.cs" />
@@ -80,6 +81,7 @@
     <Compile Include="Trees\BinaryTree\BinaryTreeTraversal\InorderBinaryTreeTraversal.cs" />
     <Compile Include="Trees\BinaryTree\BinaryTreeTraversal\PostOrderBinaryTreeTraversal.cs" />
     <Compile Include="Trees\BinaryTree\BinaryTreeTraversal\PreorderBinaryTreeTraversal.cs" />
+    <Compile Include="Trees\BinaryTree\CheckingToBst.cs" />
     <Compile Include="Trees\UnimportantOrderTreeDesc\UnimportantOrderTreeDesc.cs" />
     <Compile Include="TypeDTO.cs" />
   </ItemGroup>
