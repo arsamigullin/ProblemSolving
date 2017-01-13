@@ -78,6 +78,9 @@
     <Compile Include="Startup.cs" />
     <Compile Include="Trees\BinaryTree\BinaryTreeDescription\BinaryNode.cs" />
     <Compile Include="Trees\BinaryTree\BinaryTreeDescription\IBinaryNode.cs" />
+    <Compile Include="Trees\BinaryTree\BinaryTreeTraversal\DepthFirstBinaryTreeTraversal.cs" />
+    <Compile Include="Trees\BinaryTree\OperatingBinaryTree\AddingNodesSortedOrderToBinaryTree.cs" />
+    <Compile Include="Trees\TreeFactory.cs" />
     <Compile Include="Trees\BinaryTree\BinaryTreeTraversal\InorderBinaryTreeTraversal.cs" />
     <Compile Include="Trees\BinaryTree\BinaryTreeTraversal\PostOrderBinaryTreeTraversal.cs" />
     <Compile Include="Trees\BinaryTree\BinaryTreeTraversal\PreorderBinaryTreeTraversal.cs" />
