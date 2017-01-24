@@ -82,12 +82,14 @@
     <Compile Include="LinkedList\SinglyLinkedList\InsertionSortingSingly.cs" />
     <Compile Include="Modules\RegisteringModules.cs" />
     <Compile Include="NumericalAlgorithms\Devisors\GCD.cs" />
+    <Compile Include="NumericalAlgorithms\Devisors\LCM.cs" />
     <Compile Include="NumericalAlgorithms\Primes\FindingPrimes.cs" />
     <Compile Include="NumericalAlgorithms\Primes\TestingForPrimality.cs" />
     <Compile Include="PerfomanceMeasurement\Perfomance.cs" />
     <Compile Include="NumericalAlgorithms\Primes\FindingPrimeFactors.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="ReadingTestCases.cs" />
     <Compile Include="Searching\BinarySearch.cs" />
     <Compile Include="Searching\InterpolationSearch.cs" />
     <Compile Include="Sorting\ON2\BubbleSort.cs" />
@@ -98,6 +100,8 @@
     <Compile Include="Sorting\ONLogN\QuickSort.cs" />
     <Compile Include="Startup.cs" />
     <Compile Include="Strings\MatchingParentheses.cs" />
+    <Compile Include="Trees\BalancedTree\AVLTree\AVLTreeNode.cs" />
+    <Compile Include="Trees\BalancedTree\AVLTree\IAVLTreeNode.cs" />
     <Compile Include="Trees\BinaryTree\BinaryTreeDescription\BinaryNode.cs" />
     <Compile Include="Trees\BinaryTree\BinaryTreeDescription\IBinaryNode.cs" />
     <Compile Include="Trees\BinaryTree\BinaryTreeTraversal\DepthFirstBinaryTreeTraversal.cs" />

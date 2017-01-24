@@ -7,14 +7,14 @@ using Algorithms.Attributes;
 
 namespace Algorithms.NumericalAlgorithms.Devisors
 {
-    [DisplayInfo("Devisors", "Great Common Devisor", typeof(List<long>))]
+    [DisplayInfo("Numeric Algorithms", "GCD", typeof(List<long>))]
     class GCD
     {
         // O(logB) - Euclidian algorithm
         public List<long> CalculateGDC()
         {
-            long number1 = 4851;
-            long number2 = 3003;
+            long number1 = 3;
+            long number2 = 4;
             long reminder; 
             while (number2!=0)
             {
