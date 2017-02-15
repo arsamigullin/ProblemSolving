@@ -7,7 +7,7 @@ using Algorithms.Attributes;
 
 namespace Algorithms.AdvancedTasks
 {
-    [DisplayInfo("Anvanced Tasks", "Hackerrank - Camel Case", typeof(List<int>))]
+    [DisplayInfo("Hackerrank - Strings", "Hackerrank - Camel Case", typeof(List<int>))]
     class CamelCase
     {
         public List<int> Go()

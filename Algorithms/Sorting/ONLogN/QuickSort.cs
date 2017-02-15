@@ -12,7 +12,7 @@ namespace Algorithms.Sorting.ONLogN
     {
         public List<int> Sort()
         {
-            int[] values = new[] {2, 1, 4, 3, 7, 5, 8, 6};
+            int[] values = new[] {5,8,1,3,7,9,2};
             DoQuickSort(values,0, values.Length-1);
             return values.ToList();
         }

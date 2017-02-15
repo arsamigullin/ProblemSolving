@@ -7,7 +7,7 @@ using Algorithms.Attributes;
 
 namespace Algorithms.AdvancedTasks.Hackerrank.Strings
 {
-    [DisplayInfo("Anvanced Tasks", "Hackerrank - MakingAnagrams", typeof(List<string>))]
+    [DisplayInfo("Hackerrank - Strings", "Hackerrank - MakingAnagrams", typeof(List<string>))]
     class MakingAnagrams
     {
         public List<int> Go()
