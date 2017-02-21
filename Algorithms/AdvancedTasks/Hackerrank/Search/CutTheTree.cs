@@ -67,7 +67,7 @@ namespace Algorithms.AdvancedTasks.Hackerrank.Search
                 min = total - 2*arr[0];
             }
             long sum = 0;
-            if (dictind[root].Count == 1)
+            if (dictind[root].Count == 1 && dictind[root][0]==depindex)
             {
                 sum = arr[root- 1];
             }

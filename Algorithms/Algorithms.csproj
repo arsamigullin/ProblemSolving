@@ -54,10 +54,15 @@
     <Compile Include="AdvancedTasks\AkvInterviews\SortingArrayAtXKposition.cs" />
     <Compile Include="AdvancedTasks\BoyerMooreSearchingEntriesString.cs" />
     <Compile Include="AdvancedTasks\Hackerrank\Search\ConnectedCellInAGrid.cs" />
+    <Compile Include="AdvancedTasks\Hackerrank\Search\CountLuck.cs" />
     <Compile Include="AdvancedTasks\Hackerrank\Search\CutTheTree.cs" />
     <Compile Include="AdvancedTasks\Hackerrank\Search\GridlandMetro.cs" />
     <Compile Include="AdvancedTasks\Hackerrank\Search\Hackerland Radio Transmitters.cs" />
     <Compile Include="AdvancedTasks\Hackerrank\Search\IceCreamParlor.cs" />
+    <Compile Include="AdvancedTasks\Hackerrank\Search\PlayHanoi.cs" />
+    <Compile Include="AdvancedTasks\Hackerrank\Search\ShortPalindrome.cs" />
+    <Compile Include="AdvancedTasks\Hackerrank\Search\TowerOfHanoi3Rods.cs" />
+    <Compile Include="AdvancedTasks\Hackerrank\Search\TowerOfHanoi4Rods.cs" />
     <Compile Include="AdvancedTasks\Hackerrank\Strings\AlternatingCharacters.cs" />
     <Compile Include="AdvancedTasks\Hackerrank\Strings\CaesarCipher.cs" />
     <Compile Include="AdvancedTasks\Hackerrank\Tree\SwapNodesAlgo.cs" />

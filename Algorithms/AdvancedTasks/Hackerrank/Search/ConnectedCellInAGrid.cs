@@ -11,10 +11,10 @@ namespace Algorithms.AdvancedTasks.Hackerrank.Search
     class ConnectedCellInAGrid
     {
        public List<int> Go()
-        {
+       {
+           double d = 2.5%(1000000000+7);
             /* Enter your code here. Read input from STDIN. Print output to STDOUT. Your class should be named Solution */
             ReadingTestCases.ReadAllText();
-
             int n = Int32.Parse(ReadingTestCases.ReadLine());
             int m = Int32.Parse(ReadingTestCases.ReadLine());
             int[][] a = new int[n][];
@@ -25,151 +25,166 @@ namespace Algorithms.AdvancedTasks.Hackerrank.Search
                 row++;
             }
             int[,] map = new int[n, m];
-            List<int> list = new List<int>();
-            int max = 0;
-            check(0, 0, a, map, n, m, list, ref max);
-            for (int i = 0; i < list.Count; i++)
-            {
-                Console.WriteLine(list[i]);
-            }
-            Console.WriteLine(max);
+            Dictionary<int, int> dict = new Dictionary<int, int>();
+            int key = 0;
+            check(a, map, 0, 0, n, m, dict, ref key);
+            Console.WriteLine(dict.Values.Max());
             return new List<int>();
         }
-        void check(int se, int si, int[][] a, int[,] map, int n, int m, List<int> list, ref int max)
+        void check(int[][] a, int[,] map, int si, int sj, int n, int m , Dictionary<int, int> dict, ref int key )
         {
-            for (int i = se; i < n; i++)
+            int bigMax = 0;
+            int max = 0;
+            for (int i = si; i < n; i++)
             {
-                for (int j = si; j < m; j++)
+                for (int j = sj; j < m; j++)
                 {
                     if (a[i][j] == 0) continue;
-                    if (i == se && j == si && map[i, j]==0)
-                    {
-                 
-                    }
-                    //map[i,j]++; 
                     int inci = i + 1;
                     int deci = i - 1;
                     int incj = j + 1;
                     int decj = j - 1;
-                    bool isFound = false;
-                    map[i, j]++;
-                
+                    int count = 0;
+                    int internalKey = getKeyFromMap(a, map, i, j, m, n, ref key);
+                    if (map[i, j] == 0)
+                    {
+                        map[i, j] = internalKey;
+                        count++;
+                    }
+
                     if (inci < n && incj < m && a[inci][incj] != 0)
                     {
-                        isFound = true;
-                        // Did we marked that element
-                        if (map[inci, incj] == 0)
+                        if (map[inci, incj]==0)
                         {
-                           
-                            map[inci, incj] = ++max;
-                            check(inci, incj, a, map, n, m, list, ref max);
-                           
+                            map[inci, incj]= internalKey;
+                            count++;
+                            check(a, map, inci, incj, n, m, dict, ref key);
                         }
                     }
                     if (deci >= 0 && a[deci][j] != 0)
                     {
-                        isFound = true;
-                        if (map[deci, j] == 0)
+                        if (map[deci, j]==0)
                         {
-                           
-                            map[deci, j] = ++max;
-                            check(deci, j, a, map, n, m, list, ref max);
-                        
-
+                            map[deci, j] = internalKey;
+                            count++;
+                            check(a, map, deci, j, n, m, dict, ref key);
                         }
+                   
                     }
                     if (deci >= 0 && incj < m && a[deci][incj] != 0)
                     {
-                        isFound = true;
-                        if (map[deci, incj] == 0)
-                        {
-                            
-                            map[deci, incj] = ++max;
-                            check(deci, incj, a, map, n, m, list, ref max);
-                          
 
+                        if (map[deci, incj]==0)
+                        {
+                            map[deci, incj] = internalKey;
+                            count++;
+                            check(a, map, deci, incj, n, m, dict, ref key);
                         }
                     }
                     if (decj >= 0 && a[i][decj] != 0)
                     {
-                        isFound = true;
+
                         if (map[i, decj] == 0)
                         {
-                           
-                            map[i, decj] = ++max;
-                            check(i, decj, a, map, n, m, list, ref max);
-                         
-
+                            map[i, decj] = internalKey;
+                            count++;
+                            check(a, map, i, decj, n, m, dict, ref key);
                         }
                     }
                     if (incj < m && a[i][incj] != 0)
                     {
-                        isFound = true;
                         if (map[i, incj] == 0)
                         {
-                            map[i, incj] = ++max;
-                            check(i, incj, a, map, n, m, list, ref max);
-                           
+                            map[i, incj] = internalKey;
+                            count++;
+                            check(a, map, i, incj, n, m, dict, ref key);
                         }
                     }
                     if (decj >= 0 && inci < n && a[inci][decj] != 0)
                     {
-                        isFound = true;
                         if (map[inci, decj] == 0)
                         {
-                            map[inci, decj] = ++max;
-                            check(inci, decj, a, map, n, m, list, ref max);
-                        
+                            map[inci, decj] = internalKey;
+                            count++;
+                            check(a, map, inci, decj, n, m, dict, ref key);
                         }
-
                     }
                     if (inci < n && a[inci][j] != 0)
                     {
-                        isFound = true;
                         if (map[inci, j] == 0)
                         {
-                            
-                            map[inci, j] = ++max;
-                            check(inci, j, a, map, n, m, list, ref max);
-                       
+                            map[inci, j] = internalKey;
+                            count++;
+                            check(a, map, inci, j, n, m, dict, ref key);
                         }
-
                     }
                     if (decj >= 0 && deci >= 0 && a[deci][decj] != 0)
                     {
-                        isFound = true;
                         if (map[deci, decj] == 0)
                         {
-
-                            map[deci, decj] = ++max;
-                            check(deci, decj, a, map, n, m, list, ref max);
-                            
+                            map[deci, decj] = internalKey;
+                            count++;
+                            check(a, map, deci, decj, n, m, dict, ref key);
                         }
-
                     }
-                    if (!isFound)
-                    {
-                        max++;
-                        if (max != 0) list.Add(max);
-                      //  Console.WriteLine(i + " " + j + " " + max);
-                        max = 0;
-                        map[i, j]++;
-                        /* if (max<map[i,j])
-                         {
-                            max=map[i,j];
-                          }*/
 
-                        //max = 0;
+                    if (dict.ContainsKey(internalKey))
+                    {
+                        dict[internalKey] += count;
                     }
                     else
                     {
-                        max++;
+                        dict.Add(internalKey,count);
                     }
-                    
-
-
                 }
             }
+        }
+
+        int getKeyFromMap(int[][] a, int[,] map, int i, int j, int m, int n, ref int key)
+        {
+            int inci = i + 1;
+            int deci = i - 1;
+            int incj = j + 1;
+            int decj = j - 1;
+            if (map[i, j] > 0)
+            {
+                return map[i, j];
+            }
+            if (inci < n && incj < m && a[inci][incj] != 0)
+            {
+                if (map[inci, incj] > 0) return map[inci, incj];
+            }
+            if (deci >= 0 && a[deci][j] != 0)
+            {
+                if (map[deci, j] > 0) return map[deci, j];
+            }
+            if (deci >= 0 && incj < m && a[deci][incj] != 0)
+            {
+                if (map[deci, incj] > 0) return map[deci, incj];
+
+            }
+            if (decj >= 0 && a[i][decj] != 0)
+            {
+                if (map[i, decj] > 0) return map[i, decj];
+            }
+            if (incj < m && a[i][incj] != 0)
+            {
+                if (map[i, incj] > 0) return map[i, incj];
+            }
+            if (decj >= 0 && inci < n && a[inci][decj] != 0)
+            {
+                if (map[inci, decj] > 0) return map[inci, decj];
+            }
+            if (inci < n && a[inci][j] != 0)
+            {
+                if (map[inci, j] > 0) return map[inci, j];
+            }
+            if (decj >= 0 && deci >= 0 && a[deci][decj] != 0)
+            {
+                if (map[deci, decj] > 0) return map[deci, decj];
+            }
+
+            return ++key;
         }
     }
 }
