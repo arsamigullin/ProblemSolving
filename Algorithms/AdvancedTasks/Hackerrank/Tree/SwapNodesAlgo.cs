@@ -18,6 +18,7 @@ namespace Algorithms.AdvancedTasks.Hackerrank.Tree
     {
         public List<int> Go()
         {
+            int[] ar = new[] {1};
             ReadingTestCases.ReadAllText();
 
             int N = Int32.Parse(ReadingTestCases.ReadLine());

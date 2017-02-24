@@ -17,6 +17,7 @@ namespace Algorithms
             {
                 queue.Enqueue(l);
             }
+           // queue.Enqueue(" ");
         }
 
         public static string ReadLine()
