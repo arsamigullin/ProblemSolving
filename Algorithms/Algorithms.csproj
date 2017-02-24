@@ -54,6 +54,8 @@
     <Compile Include="AdvancedTasks\AkvInterviews\SortingArrayAtXKposition.cs" />
     <Compile Include="AdvancedTasks\BoyerMooreSearchingEntriesString.cs" />
     <Compile Include="AdvancedTasks\Hackerrank\Strings\AlternatingCharacters.cs" />
+    <Compile Include="AdvancedTasks\Hackerrank\Strings\BiggerIsGreater.cs" />
+    <Compile Include="AdvancedTasks\Hackerrank\Strings\BiggerIsGreater2.cs" />
     <Compile Include="AdvancedTasks\Hackerrank\Strings\CaesarCipher.cs" />
     <Compile Include="AdvancedTasks\Hackerrank\Tree\SwapNodesAlgo.cs" />
     <Compile Include="AdvancedTasks\Kattis\AntiArithmetic.cs" />

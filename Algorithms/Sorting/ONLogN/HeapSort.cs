@@ -12,6 +12,9 @@ namespace Algorithms.Sorting.ONLogN
     {
         public List<int> Sort()
         {
+            string [] l = new string[]{"A", "B", "AE"};
+            Array.Sort(l);
+            //var res = f.IndexOf(t);
             int[] array = new int[] { 456, 987651, 56, 32546513, 668, 5, 946, 8, 65496, 876 };
             //array = new int[] { 7,1,10,4,6,9,2,11,3,5,12,8 };
             // We need turn the array into the heap
