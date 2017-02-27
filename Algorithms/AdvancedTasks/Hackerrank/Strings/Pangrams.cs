@@ -8,7 +8,7 @@ using Algorithms.Attributes;
 
 namespace Algorithms.AdvancedTasks.Hackerrank
 {
-    [DisplayInfo("Anvanced Tasks", "Hackerrank - Pangrams", typeof(List<string>))]
+    [DisplayInfo("Hackerrank - Strings", "Hackerrank - Pangrams", typeof(List<string>))]
     class Pangrams
     {
         public List<string> FindPangrams()

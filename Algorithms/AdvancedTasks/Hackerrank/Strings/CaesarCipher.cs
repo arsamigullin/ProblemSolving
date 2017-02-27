@@ -7,11 +7,14 @@ using Algorithms.Attributes;
 
 namespace Algorithms.AdvancedTasks.Hackerrank.Strings
 {
-    [DisplayInfo("Anvanced Tasks", "Hackerrank - Caesar Cipher", typeof(List<string>))]
+    [DisplayInfo("Hackerrank - Strings", "Hackerrank - Caesar Cipher", typeof(List<string>))]
     class CaesarCipher
     {
-        public List<string> Go()
+        public List<string> Go(int [][] arr)
         {
+            var t =arr[5][6];
+            int[,] rotatedarr = new int[4,5];
+
             int strLen = 11;
             string s = "middle-Outz";
             int k = 2;

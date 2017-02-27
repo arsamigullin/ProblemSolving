@@ -7,7 +7,7 @@ using Algorithms.Attributes;
 
 namespace Algorithms.AdvancedTasks
 {
-    [DisplayInfo("Anvanced Tasks", "Hackerrank - Super Reduced String", typeof(List<string>))]
+    [DisplayInfo("Hackerrank - Strings", "Hackerrank - Super Reduced String", typeof(List<string>))]
     class SuperReducingString
     {
         public List<string> Go()
