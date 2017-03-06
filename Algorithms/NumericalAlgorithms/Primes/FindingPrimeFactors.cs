@@ -11,7 +11,7 @@ namespace Algorithms
     [DisplayInfo("Primes", "Finding Primes Factors", typeof(List<long>))]
     public class FindingPrimesFactors
     {
-        private long num = 127381;
+        private long num = 50945;
         // Complexity O(N)
         public List<long> FirstVariant()
         {
