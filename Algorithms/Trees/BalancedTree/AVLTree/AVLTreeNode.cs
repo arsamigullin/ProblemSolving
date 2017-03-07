@@ -8,7 +8,7 @@ namespace Algorithms.Trees.BalancedTree.AVLTree
 {
     class AVLTreeNode : IAVLTreeNode<int>
     {
-        public int BalancedFactor => GetHeight(LeftNode) + GetHeight(RightNode);
+        //public int BalancedFactor => GetHeight(LeftNode) + GetHeight(RightNode);
 
         private int GetHeight(IAVLTreeNode<int> node)
         {
@@ -19,8 +19,9 @@ namespace Algorithms.Trees.BalancedTree.AVLTree
         public IAVLTreeNode<int> LeftNode { get; set; }
 
         public IAVLTreeNode<int> RightNode { get; set; }
-       
 
+
+        public int BalancedFactor { get; private set; }
         public int Value { get; set; }
 
     }

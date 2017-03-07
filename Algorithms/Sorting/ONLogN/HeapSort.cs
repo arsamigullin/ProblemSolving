@@ -12,7 +12,8 @@ namespace Algorithms.Sorting.ONLogN
     {
         public List<int> Sort()
         {
-            int[] array = new int[] { 456, 987651, 56, 32546513, 668, 5, 946, 8, 65496, 876 };
+           // int[] array = new int[] { 456, 987651, 56, 32546513, 668, 5, 946, 8, 65496, 876 };
+            int[] array = new int[] { 1,2,3,4,5,6,7,8,9,10 };
             //array = new int[] { 7,1,10,4,6,9,2,11,3,5,12,8 };
             // We need turn the array into the heap
             array = MakeHeap(array, array.Length);

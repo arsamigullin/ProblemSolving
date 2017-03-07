@@ -9,11 +9,11 @@
                     //        A       C
         public static BinaryNode<int> GetBinaryTreeWithHeight3()
         {
-            BinaryNode<int> Droot = new BinaryNode<int>("Droot");
-            BinaryNode<int> B = new BinaryNode<int>("B");
-            BinaryNode<int> A = new BinaryNode<int>("A");
-            BinaryNode<int> C = new BinaryNode<int>("C");
-            BinaryNode<int> E = new BinaryNode<int>("E");
+            BinaryNode<int> Droot = new BinaryNode<int>(1);
+            BinaryNode<int> B = new BinaryNode<int>(2);
+            BinaryNode<int> A = new BinaryNode<int>(3);
+            BinaryNode<int> C = new BinaryNode<int>(4);
+            BinaryNode<int> E = new BinaryNode<int>(5);
             Droot.LeftNode = B;
             Droot.RightNode = E;
             B.LeftNode = A;

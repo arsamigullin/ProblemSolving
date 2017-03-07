@@ -53,17 +53,23 @@
     <Compile Include="AdvancedTasks\AkvInterviews\SortingArrayAtKposition.cs" />
     <Compile Include="AdvancedTasks\AkvInterviews\SortingArrayAtXKposition.cs" />
     <Compile Include="AdvancedTasks\BoyerMooreSearchingEntriesString.cs" />
+    <Compile Include="AdvancedTasks\Hackerrank\Heap\FindingMedian.cs" />
+    <Compile Include="AdvancedTasks\Hackerrank\Heap\HeapDescription\Heap.cs" />
+    <Compile Include="AdvancedTasks\Hackerrank\Heap\HeapDescription\MaxHeap.cs" />
+    <Compile Include="AdvancedTasks\Hackerrank\Heap\HeapDescription\MinHeap.cs" />
     <Compile Include="AdvancedTasks\Hackerrank\Search\ConnectedCellInAGrid.cs" />
     <Compile Include="AdvancedTasks\Hackerrank\Search\CountLuck.cs" />
     <Compile Include="AdvancedTasks\Hackerrank\Search\CutTheTree.cs" />
+    <Compile Include="AdvancedTasks\Hackerrank\Search\GenaPlayingHanoi.cs" />
     <Compile Include="AdvancedTasks\Hackerrank\Search\GridlandMetro.cs" />
     <Compile Include="AdvancedTasks\Hackerrank\Search\Hackerland Radio Transmitters.cs" />
     <Compile Include="AdvancedTasks\Hackerrank\Search\IceCreamParlor.cs" />
-    <Compile Include="AdvancedTasks\Hackerrank\Search\PlayHanoi.cs" />
     <Compile Include="AdvancedTasks\Hackerrank\Search\ShortPalindrome.cs" />
     <Compile Include="AdvancedTasks\Hackerrank\Search\TowerOfHanoi3Rods.cs" />
     <Compile Include="AdvancedTasks\Hackerrank\Search\TowerOfHanoi4Rods.cs" />
     <Compile Include="AdvancedTasks\Hackerrank\Strings\AlternatingCharacters.cs" />
+    <Compile Include="AdvancedTasks\Hackerrank\Strings\BiggerIsGreater.cs" />
+    <Compile Include="AdvancedTasks\Hackerrank\Strings\BiggerIsGreater2.cs" />
     <Compile Include="AdvancedTasks\Hackerrank\Strings\CaesarCipher.cs" />
     <Compile Include="AdvancedTasks\Hackerrank\Strings\SherlockAndAnagrams.cs" />
     <Compile Include="AdvancedTasks\Hackerrank\Strings\StringConstruction.cs" />
@@ -74,6 +80,7 @@
     <Compile Include="AdvancedTasks\Hackerrank\Strings\Gemstones.cs" />
     <Compile Include="AdvancedTasks\Hackerrank\Strings\MakingAnagrams.cs" />
     <Compile Include="AdvancedTasks\Hackerrank\Strings\Pangrams.cs" />
+    <Compile Include="AdvancedTasks\Hackerrank\Tries\ContactList.cs" />
     <Compile Include="AdvancedTasks\Hackerrank\Strings\SuperReducingString.cs" />
     <Compile Include="AdvancedTasks\Hackerrank\Strings\TwoCharacters.cs" />
     <Compile Include="AdvancedTasks\Kattis\BusNumbers.cs" />
@@ -87,6 +94,7 @@
     <Compile Include="LinkedList\SinglyLinkedList\AddingCellsAtTheBeginning.cs" />
     <Compile Include="LinkedList\SinglyLinkedList\DetectingLoops\DetectingWithHashTable.cs" />
     <Compile Include="LinkedList\SinglyLinkedList\DetectingLoops\ListRetracing.cs" />
+    <Compile Include="LinkedList\SinglyLinkedList\RemoveDuplication.cs" />
     <Compile Include="LinkedList\SinglyLinkedList\SinglyCellDescription\DoublyCell.cs" />
     <Compile Include="LinkedList\SinglyLinkedList\SinglyCellDescription\IDoublyCell.cs" />
     <Compile Include="LinkedList\SinglyLinkedList\FindingCells.cs" />
@@ -130,6 +138,9 @@
     <Compile Include="Trees\BinaryTree\BinaryTreeTraversal\InorderBinaryTreeTraversal.cs" />
     <Compile Include="Trees\BinaryTree\BinaryTreeTraversal\PostOrderBinaryTreeTraversal.cs" />
     <Compile Include="Trees\BinaryTree\BinaryTreeTraversal\PreorderBinaryTreeTraversal.cs" />
+    <Compile Include="Trees\BinaryTree\CheckingToBst.cs" />
+    <Compile Include="Trees\Tries\TrieDescription\Trie.cs" />
+    <Compile Include="Trees\Tries\TrieDescription\TrieNode.cs" />
     <Compile Include="Trees\UnimportantOrderTreeDesc\UnimportantOrderTreeDesc.cs" />
     <Compile Include="TypeDTO.cs" />
   </ItemGroup>

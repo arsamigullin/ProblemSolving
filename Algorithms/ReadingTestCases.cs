@@ -12,8 +12,7 @@ namespace Algorithms
         private static List<string> list = new List<string>();
         public static void ReadAllText()
         {
-            
-            list =File.ReadAllText(@"C:\projects\ProblemSolving\test.txt").Split(new string[] { Environment.NewLine }, StringSplitOptions.None).ToList();
+            list=File.ReadAllText(Environment.CurrentDirectory+"\\test.txt").Split(new string[] { Environment.NewLine }, StringSplitOptions.None).ToList();
             foreach (var l in list)
             {
                 queue.Enqueue(l);
