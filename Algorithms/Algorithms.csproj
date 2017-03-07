@@ -65,6 +65,9 @@
     <Compile Include="AdvancedTasks\Hackerrank\Search\TowerOfHanoi4Rods.cs" />
     <Compile Include="AdvancedTasks\Hackerrank\Strings\AlternatingCharacters.cs" />
     <Compile Include="AdvancedTasks\Hackerrank\Strings\CaesarCipher.cs" />
+    <Compile Include="AdvancedTasks\Hackerrank\Strings\SherlockAndAnagrams.cs" />
+    <Compile Include="AdvancedTasks\Hackerrank\Strings\StringConstruction.cs" />
+    <Compile Include="AdvancedTasks\Hackerrank\Strings\WeightedUniformStrings.cs" />
     <Compile Include="AdvancedTasks\Hackerrank\Tree\SwapNodesAlgo.cs" />
     <Compile Include="AdvancedTasks\Kattis\AntiArithmetic.cs" />
     <Compile Include="AdvancedTasks\Hackerrank\Strings\CamelCase.cs" />
@@ -78,6 +81,7 @@
     <Compile Include="AdvancedTasks\Kattis\CheckingForCorrectness.cs" />
     <Compile Include="AdvancedTasks\Kattis\ListGame.cs" />
     <Compile Include="Attributes\DisplayInfoAttribute.cs" />
+    <Compile Include="ClassForTests.cs" />
     <Compile Include="LinkedList\DoublyLinkedList\InsertionSortingDoubly.cs" />
     <Compile Include="LinkedList\DoublyLinkedList\ReverseList.cs" />
     <Compile Include="LinkedList\SinglyLinkedList\AddingCellsAtTheBeginning.cs" />

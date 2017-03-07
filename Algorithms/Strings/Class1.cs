@@ -22,6 +22,7 @@ class Solution
         int first = searh(area, ref alr, min, M, N);
         int second = searh(area, ref alr, min, M, N);
         Console.WriteLine(first*second);
+
     }
 
     static int searh(List<char[]> area, ref bool[,] alr, int min, int M, int N)

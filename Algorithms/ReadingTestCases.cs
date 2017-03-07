@@ -12,7 +12,7 @@ namespace Algorithms
         private static List<string> list = new List<string>();
         public static void ReadAllText()
         {
- 
+            
             list =File.ReadAllText(@"C:\projects\ProblemSolving\test.txt").Split(new string[] { Environment.NewLine }, StringSplitOptions.None).ToList();
             foreach (var l in list)
             {
@@ -24,6 +24,11 @@ namespace Algorithms
         public static string ReadLine()
         {
             return queue.Dequeue();
+        }
+
+        public static void WriteLine(string res)
+        {
+            File.AppendAllText(@"C:\projects\ProblemSolving\results.txt", res+ "\n");
         }
     }
 }
