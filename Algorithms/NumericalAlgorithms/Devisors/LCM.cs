@@ -13,7 +13,7 @@ namespace Algorithms.NumericalAlgorithms.Devisors
 
         public List<long> Go()
         {
-            int [] arr = new int [] {3,6,9};
+            int [] arr = new int [] {165,135};
             int lc = arr[0];
             for (int i = 1; i < arr.Length; i++)
             {

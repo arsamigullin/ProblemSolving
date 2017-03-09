@@ -109,6 +109,7 @@
     <Compile Include="Modules\RegisteringModules.cs" />
     <Compile Include="NumericalAlgorithms\Devisors\GCD.cs" />
     <Compile Include="NumericalAlgorithms\Devisors\LCM.cs" />
+    <Compile Include="NumericalAlgorithms\Primes\FindAllPossibleDivisors.cs" />
     <Compile Include="NumericalAlgorithms\Primes\FindingPrimes.cs" />
     <Compile Include="NumericalAlgorithms\Primes\TestingForPrimality.cs" />
     <Compile Include="PerfomanceMeasurement\Perfomance.cs" />

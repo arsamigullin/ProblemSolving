@@ -27,6 +27,7 @@ namespace Algorithms.Searching
             values[index] = target;
             values = values.OrderBy(x => x).ToArray();*/
         }
+        // Log2(Log2N)
         public int Search()
         {
             int min = 0;

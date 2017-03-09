@@ -26,6 +26,7 @@ namespace Algorithms.Searching
 
         // Find the target item's index in the sorted array.
         // If the item isn't in the array, return -1.
+        // Log2(N)
         public List<long> Go()
         {
 
