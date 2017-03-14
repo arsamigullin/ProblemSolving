@@ -53,6 +53,7 @@
     <Compile Include="AdvancedTasks\AkvInterviews\SortingArrayAtKposition.cs" />
     <Compile Include="AdvancedTasks\AkvInterviews\SortingArrayAtXKposition.cs" />
     <Compile Include="AdvancedTasks\BoyerMooreSearchingEntriesString.cs" />
+    <Compile Include="AdvancedTasks\Hackerrank\DynamicProgramming\Equal.cs" />
     <Compile Include="AdvancedTasks\Hackerrank\Heap\FindingMedian.cs" />
     <Compile Include="AdvancedTasks\Hackerrank\Heap\HeapDescription\Heap.cs" />
     <Compile Include="AdvancedTasks\Hackerrank\Heap\HeapDescription\MaxHeap.cs" />
@@ -129,6 +130,10 @@
     <Compile Include="Strings\BoyerMooreSearching.cs" />
     <Compile Include="Strings\Class1.cs" />
     <Compile Include="Strings\MatchingParentheses.cs" />
+    <Compile Include="TestingYourself\LinkedList\LinkedListSingly\LinkedListDescription\SinglyLinkedListImpl.cs" />
+    <Compile Include="TestingYourself\LinkedList\LinkedListSingly\MergingTwoLinkedListIntoOne.cs" />
+    <Compile Include="TestingYourself\LinkedList\LinkedListSingly\ReversingSinglyLinkedList.cs" />
+    <Compile Include="TestingYourself\LinkedList\LinkedListSingly\SortingLinkedListWithoutAdditionalMemory.cs" />
     <Compile Include="Trees\BalancedTree\AVLTree\AVLTreeNode.cs" />
     <Compile Include="Trees\BalancedTree\AVLTree\IAVLTreeNode.cs" />
     <Compile Include="Trees\BinaryTree\BinaryTreeDescription\BinaryNode.cs" />

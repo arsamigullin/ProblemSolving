@@ -13,8 +13,8 @@ namespace Algorithms.NumericalAlgorithms.Devisors
         // O(logB) - Euclidian algorithm
         public List<long> CalculateGDC()
         {
-            long number1 = 635;
-            long number2 = 165;
+            long number1 = 667;
+            long number2 = 297;
             long reminder; 
             while (number2!=0)
             {
