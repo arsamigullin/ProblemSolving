@@ -40,6 +40,7 @@
     <Reference Include="PresentationFramework" />
     <Reference Include="System" />
     <Reference Include="System.Core" />
+    <Reference Include="System.Numerics" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -48,16 +49,24 @@
     <Reference Include="WindowsBase" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AdvancedTasks\AkvInterviews\ConstructingBstFromSortedArray.cs" />
     <Compile Include="AdvancedTasks\AkvInterviews\DevisorsPrimeFactors.cs" />
     <Compile Include="AdvancedTasks\AkvInterviews\FindingMostCommonDevisorFromAnArray.cs" />
     <Compile Include="AdvancedTasks\AkvInterviews\SortingArrayAtKposition.cs" />
     <Compile Include="AdvancedTasks\AkvInterviews\SortingArrayAtXKposition.cs" />
     <Compile Include="AdvancedTasks\BoyerMooreSearchingEntriesString.cs" />
+    <Compile Include="AdvancedTasks\DataStructure\Trees\BST\BSTNode.cs" />
+    <Compile Include="AdvancedTasks\DataStructure\Trees\BST\ITree.cs" />
+    <Compile Include="AdvancedTasks\DataStructure\Trees\BST\ITreeNode.cs" />
+    <Compile Include="AdvancedTasks\DataStructure\Trees\BST\Tree.cs" />
     <Compile Include="AdvancedTasks\Hackerrank\DynamicProgramming\Equal.cs" />
     <Compile Include="AdvancedTasks\Hackerrank\Heap\FindingMedian.cs" />
     <Compile Include="AdvancedTasks\Hackerrank\Heap\HeapDescription\Heap.cs" />
     <Compile Include="AdvancedTasks\Hackerrank\Heap\HeapDescription\MaxHeap.cs" />
     <Compile Include="AdvancedTasks\Hackerrank\Heap\HeapDescription\MinHeap.cs" />
+    <Compile Include="AdvancedTasks\Hackerrank\Mathmatics\Combinatorics\nCrTable.cs" />
+    <Compile Include="AdvancedTasks\Hackerrank\Search\AbsoluteElementSums.cs" />
+    <Compile Include="AdvancedTasks\Hackerrank\Search\BeautifulQuadruples.cs" />
     <Compile Include="AdvancedTasks\Hackerrank\Search\ConnectedCellInAGrid.cs" />
     <Compile Include="AdvancedTasks\Hackerrank\Search\CountLuck.cs" />
     <Compile Include="AdvancedTasks\Hackerrank\Search\CutTheTree.cs" />
@@ -65,6 +74,8 @@
     <Compile Include="AdvancedTasks\Hackerrank\Search\GridlandMetro.cs" />
     <Compile Include="AdvancedTasks\Hackerrank\Search\Hackerland Radio Transmitters.cs" />
     <Compile Include="AdvancedTasks\Hackerrank\Search\IceCreamParlor.cs" />
+    <Compile Include="AdvancedTasks\Hackerrank\Search\MaximumSubarraySum.cs" />
+    <Compile Include="AdvancedTasks\Hackerrank\Search\MinimumLoss.cs" />
     <Compile Include="AdvancedTasks\Hackerrank\Search\ShortPalindrome.cs" />
     <Compile Include="AdvancedTasks\Hackerrank\Search\TowerOfHanoi3Rods.cs" />
     <Compile Include="AdvancedTasks\Hackerrank\Search\TowerOfHanoi4Rods.cs" />
@@ -90,6 +101,7 @@
     <Compile Include="AdvancedTasks\Kattis\ListGame.cs" />
     <Compile Include="Attributes\DisplayInfoAttribute.cs" />
     <Compile Include="ClassForTests.cs" />
+    <Compile Include="LinkedList\CreatingLinkedListFromBST.cs" />
     <Compile Include="LinkedList\DoublyLinkedList\InsertionSortingDoubly.cs" />
     <Compile Include="LinkedList\DoublyLinkedList\ReverseList.cs" />
     <Compile Include="LinkedList\SinglyLinkedList\AddingCellsAtTheBeginning.cs" />

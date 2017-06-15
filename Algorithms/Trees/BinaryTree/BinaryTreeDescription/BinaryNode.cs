@@ -55,6 +55,30 @@ namespace Algorithms.Trees
             }
         }
 
+        public T LowerBound(T val, T lastval)
+        {
+            int cmp = val.CompareTo(Value);
+            if (cmp < 0)
+            {
+                if (LeftNode == null)
+                {
+                    return lastval;
+                }
+                lastval = LeftNode.Value;
+               return LeftNode.LowerBound(val, lastval);
+            }
+            else if (cmp>0)
+            {
+                if (RightNode == null)
+                {
+                    return lastval;
+                }
+                lastval = RightNode.Value;
+                return RightNode.LowerBound(val, lastval);
+            }
+            return val;
+        }
+
         public BinaryNode(T data)
         {
             Data = data;
