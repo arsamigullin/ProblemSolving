@@ -8,66 +8,28 @@ using Algorithms.LinkedList.SinglyLinkedList.SinglyCellDescription;
 
 namespace Algorithms.LinkedList.SinglyLinkedList
 {
-    [DisplayInfo("LinkedListSingly", "Reversing list", typeof(List<string>))]
-    public class ReversingLinkedList
+    [DisplayInfo("LinkedListSingly", "Reversing LinkedList", typeof(List<bool>))]
+    class ReversingLinkedList
     {
-        private List<ISinglyCell<string>> linkedList;
-        LinkedListResultDisplaying displaying = new LinkedListResultDisplaying();
-        public ReversingLinkedList()
+        public List<bool> Go()
         {
-            // Initialize our linked list
-            linkedList = new List<ISinglyCell<string>>
-            {
-               // new SinglyCell<string> {Value = "sentinel"},
-                new SinglyCell<string> {Value = "fist"},
-                new SinglyCell<string> {Value = "second"},
-                new SinglyCell<string> {Value = "third"},
-                new SinglyCell<string> {Value = "fourth"},
-                new SinglyCell<string> {Value = "fifth"},
-                new SinglyCell<string> {Value = "sixth"},
-            };
-
-            for (int i = 0; i < linkedList.Count - 1; i++)
-            {
-                linkedList[i].Next = linkedList[i + 1];
-            }
-
+            ISinglyCell<int> cell = CreatingLinkedList.Create(new SinglyCell<int>(), 10, false);
+            var f =  Reverse(cell);
+            return new List<bool>();
         }
 
-        //// Basically we must move three marks:
-        ////prev, cur, next
-        //public List<string> Reverse()
-        //{
-        //    ISinglyCell<string> curCell = linkedList.First();
-        //    ISinglyCell<string> prev = null;
-        //    while (curCell!=null)
-        //    {
-        //        ISinglyCell<string> next = curCell.Next;
-        //        curCell.Next = prev;
-
-        //        prev = curCell;
-        //        curCell = next;
-        //    }
-        //    return new List<string> { "DONE reversing manual linked list" };
-        //}
-
-        // Basically we must move three marks:
-        //prev, cur, next
-        public List<string> ReverseWithoutSentinel()
+        private ISinglyCell<int> Reverse(ISinglyCell<int> head)
         {
-            int p = 1%2;
-            
-            ISinglyCell<string> curCell = linkedList[0];
-            ISinglyCell<string> prev = null;
-            while (curCell!=null)
+            ISinglyCell<int> prev = null;
+            while (head != null)
             {
-                ISinglyCell<string> nextCell = curCell.Next;
-                curCell.Next = prev;
-
-                prev = curCell;
-                curCell = nextCell;
+                ISinglyCell<int> next = head.Next;
+                head.Next = prev;
+                prev = head;
+                head = next;
             }
-            return displaying.DisplayResult(linkedList);
+            // !!!! Don't forget we have to return prev instead of head
+            return prev;
         }
     }
 }

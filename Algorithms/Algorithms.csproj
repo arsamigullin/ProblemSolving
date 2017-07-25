@@ -36,6 +36,14 @@
       <HintPath>packages\Autofac.4.1.1\lib\net45\Autofac.dll</HintPath>
       <Private>True</Private>
     </Reference>
+    <Reference Include="Castle.Core, Version=4.1.1.0, Culture=neutral, PublicKeyToken=407dd0808d44fbdc, processorArchitecture=MSIL">
+      <HintPath>packages\Castle.Core.4.1.1\lib\net45\Castle.Core.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Moq, Version=4.7.99.0, Culture=neutral, PublicKeyToken=69f491c39445e920, processorArchitecture=MSIL">
+      <HintPath>packages\Moq.4.7.99\lib\net45\Moq.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
     <Reference Include="PresentationCore" />
     <Reference Include="PresentationFramework" />
     <Reference Include="System" />
@@ -50,7 +58,10 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="AdvancedTasks\AkvInterviews\ConstructingBstFromSortedArray.cs" />
+    <Compile Include="AdvancedTasks\AkvInterviews\DecomposeTreeIntoStringAndComposeItAgain.cs" />
+    <Compile Include="AdvancedTasks\AkvInterviews\DecomposeTreesAndComposeItAgain.cs" />
     <Compile Include="AdvancedTasks\AkvInterviews\DevisorsPrimeFactors.cs" />
+    <Compile Include="AdvancedTasks\AkvInterviews\FindingMinimalValueInBinaryTree.cs" />
     <Compile Include="AdvancedTasks\AkvInterviews\FindingMostCommonDevisorFromAnArray.cs" />
     <Compile Include="AdvancedTasks\AkvInterviews\SortingArrayAtKposition.cs" />
     <Compile Include="AdvancedTasks\AkvInterviews\SortingArrayAtXKposition.cs" />
@@ -79,6 +90,7 @@
     <Compile Include="AdvancedTasks\Hackerrank\Search\ShortPalindrome.cs" />
     <Compile Include="AdvancedTasks\Hackerrank\Search\TowerOfHanoi3Rods.cs" />
     <Compile Include="AdvancedTasks\Hackerrank\Search\TowerOfHanoi4Rods.cs" />
+    <Compile Include="AdvancedTasks\Hackerrank\Stack\MaximumElement.cs" />
     <Compile Include="AdvancedTasks\Hackerrank\Strings\AlternatingCharacters.cs" />
     <Compile Include="AdvancedTasks\Hackerrank\Strings\BiggerIsGreater.cs" />
     <Compile Include="AdvancedTasks\Hackerrank\Strings\BiggerIsGreater2.cs" />
@@ -101,20 +113,25 @@
     <Compile Include="AdvancedTasks\Kattis\ListGame.cs" />
     <Compile Include="Attributes\DisplayInfoAttribute.cs" />
     <Compile Include="ClassForTests.cs" />
+    <Compile Include="ConcurrencyTesting\AsyncAwaitTesting.cs" />
     <Compile Include="LinkedList\CreatingLinkedListFromBST.cs" />
     <Compile Include="LinkedList\DoublyLinkedList\InsertionSortingDoubly.cs" />
     <Compile Include="LinkedList\DoublyLinkedList\ReverseList.cs" />
-    <Compile Include="LinkedList\SinglyLinkedList\AddingCellsAtTheBeginning.cs" />
-    <Compile Include="LinkedList\SinglyLinkedList\DetectingLoops\DetectingWithHashTable.cs" />
-    <Compile Include="LinkedList\SinglyLinkedList\DetectingLoops\ListRetracing.cs" />
+    <Compile Include="LinkedList\SinglyLinkedList\CreatingLinkedList.cs" />
+    <Compile Include="LinkedList\SinglyLinkedList\DeletingNodeFromLinkedList.cs" />
+    <Compile Include="LinkedList\SinglyLinkedList\DetectingLoops\DoesLinkedListHasALoop.cs" />
+    <Compile Include="LinkedList\SinglyLinkedList\FindingNthNodeFromTheEndOfLinkedList.cs" />
+    <Compile Include="LinkedList\SinglyLinkedList\FindingTheMiddleOfLinkedList.cs" />
+    <Compile Include="LinkedList\SinglyLinkedList\FindInterSectingNode.cs" />
+    <Compile Include="LinkedList\SinglyLinkedList\InsertingLinkedListNodeByGivenPosition.cs" />
+    <Compile Include="LinkedList\SinglyLinkedList\InsertingValueInSortedLinkedList.cs" />
+    <Compile Include="LinkedList\SinglyLinkedList\IsLinkedListEven.cs" />
+    <Compile Include="LinkedList\SinglyLinkedList\MergingTwoSorteLinkedListToOneSorted.cs" />
+    <Compile Include="LinkedList\SinglyLinkedList\PrintingLinkedListDataFromTheEnd.cs" />
     <Compile Include="LinkedList\SinglyLinkedList\RemoveDuplication.cs" />
+    <Compile Include="LinkedList\SinglyLinkedList\ReversingLinkedList.cs" />
     <Compile Include="LinkedList\SinglyLinkedList\SinglyCellDescription\DoublyCell.cs" />
     <Compile Include="LinkedList\SinglyLinkedList\SinglyCellDescription\IDoublyCell.cs" />
-    <Compile Include="LinkedList\SinglyLinkedList\FindingCells.cs" />
-    <Compile Include="LinkedList\SinglyLinkedList\IteratingOverTheList.cs" />
-    <Compile Include="LinkedList\SinglyLinkedList\DetectingLoops\RevercingCycledLinkedList.cs" />
-    <Compile Include="LinkedList\SinglyLinkedList\MergingTwoSortedLinkedListToOneSorted.cs" />
-    <Compile Include="LinkedList\SinglyLinkedList\ReversingLinkedList.cs" />
     <Compile Include="LinkedList\DoublyLinkedList\DoublyCellDescription\IDoublyCell.cs" />
     <Compile Include="LinkedList\DoublyLinkedList\DoublyCellDescription\DoublyCell.cs" />
     <Compile Include="LinkedList\LinkedListResultDisplaying.cs" />
@@ -141,7 +158,9 @@
     <Compile Include="Startup.cs" />
     <Compile Include="Strings\BoyerMooreSearching.cs" />
     <Compile Include="Strings\Class1.cs" />
+    <Compile Include="Strings\KnuthMorrisPrattKPMAlgo.cs" />
     <Compile Include="Strings\MatchingParentheses.cs" />
+    <Compile Include="Strings\ReverseString.cs" />
     <Compile Include="TestingYourself\LinkedList\LinkedListSingly\LinkedListDescription\SinglyLinkedListImpl.cs" />
     <Compile Include="TestingYourself\LinkedList\LinkedListSingly\MergingTwoLinkedListIntoOne.cs" />
     <Compile Include="TestingYourself\LinkedList\LinkedListSingly\ReversingSinglyLinkedList.cs" />
@@ -161,6 +180,7 @@
     <Compile Include="Trees\Tries\TrieDescription\TrieNode.cs" />
     <Compile Include="Trees\UnimportantOrderTreeDesc\UnimportantOrderTreeDesc.cs" />
     <Compile Include="TypeDTO.cs" />
+    <Compile Include="UnitTesting\UnitMockObj.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config">

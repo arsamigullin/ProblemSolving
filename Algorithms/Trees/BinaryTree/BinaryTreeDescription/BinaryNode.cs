@@ -82,6 +82,7 @@ namespace Algorithms.Trees
         public BinaryNode(T data)
         {
             Data = data;
+            Value = data;
         }
 
         public BinaryNode()
